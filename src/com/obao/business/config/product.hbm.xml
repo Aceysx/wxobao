@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.obao.business.entity">
+    <class name="Product" table="t_product">
+        <id name="productId" type="integer">
+            <column name="product_id"/>
+            <generator class="native"/>
+        </id>
+        <property name="productName" type="string">
+            <column name="product_name" not-null="true" length="20"/>
+        </property>
+        <property name="productImg" type="string">
+            <column name="product_img"/>
+        </property>
+        <property name="productDetails" type="string">
+            <column name="product_details" sql-type="LONGTEXT"/>
+        </property>
+        <property name="oldPrice" type="double">
+            <column name="old_price"/>
+        </property>
+        <property name="newPrice" type="double">
+            <column name="new_price"/>
+        </property>
+        <property name="addTime" type="timestamp">
+            <column name="add_time"/>
+        </property>
+        <property name="state" type="integer">
+            <column name="state"/>
+        </property>
+        <property name="remark" type="string">
+            <column name="remark"/>
+        </property>
+        <property name="promotion" type="integer">
+            <column name="promotion" default="0" />
+        </property>
+        <property name="sales" type="integer">
+            <column name="sales" default="0"/>
+        </property>
+    </class>
+
+</hibernate-mapping>

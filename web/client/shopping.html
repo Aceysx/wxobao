@@ -1,0 +1,104 @@
+<!--shopping page-->
+<div class="page " id="page_shopping" >
+    <header class="bar bar-nav" >
+        <h1 class="title">购物车</h1>
+    </header>
+    <div class="content">
+        <div class="list-block list-block media-list" id="shopping_content">
+            <!--一个商家开始-->
+            <!--<ul style="margin-bottom: 1.5rem" class="business_product">-->
+                <!--&lt;!&ndash;店铺选择框开始&ndash;&gt;-->
+                <!--<label class="label-checkbox item-content shop_title business" onclick="business_select(this)">-->
+                    <!--<input type="checkbox" name="business" class="business_select"  >-->
+                    <!--<div class="item-media store_name_checkbox">-->
+                        <!--<i class="icon icon-form-checkbox" style="margin-left: -10px;margin-top: -2px;width: 15px;height: 15px"></i>-->
+                        <!--<img src="../img/1.png" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="item-inner store_name" style="border: 0;">-->
+                        <!--<div class="item-text " >巴蜀仁和饭庄</div>-->
+                    <!--</div>-->
+                <!--</label>-->
+                <!--&lt;!&ndash;店铺选择框结束&ndash;&gt;-->
+                <!--&lt;!&ndash; Additional "swipeout" class on li &ndash;&gt;-->
+                <!--&lt;!&ndash;一个商品开始&ndash;&gt;-->
+                <!--<li class="swipeout product" onclick="product_select(this)">-->
+                    <!--<input type="hidden" class="item_id" value="1">-->
+                    <!--&lt;!&ndash; Usual list element wrapped with "swipeout-content" &ndash;&gt;-->
+                    <!--<div class="swipeout-content">-->
+                        <!--<label class="label-checkbox item-content ">-->
+                            <!--<input type="checkbox" name="product" class="product_select">-->
+                            <!--<div class="item-media">-->
+                                <!--<i class="icon icon-form-checkbox" style="margin-left: -10px;width: 15px;height: 15px"></i>-->
+                                <!--<img src="../img/1.png" alt="">-->
+                            <!--</div>-->
+                            <!--<div class="item-inner">-->
+                                <!--<div class="item-text" ><b>【新品】大盘鸡拌面，新疆特产新</b></div>-->
+                                <!--<div class="item-text">-->
+                                    <!--<span class="kind">小碗/微辣</span>-->
+                                    <!--<span class="price">￥<span class="product_price">188</span>元</span>-->
+                                    <!--<span class="number">x<span class="product_number">3</span></span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; Swipeout actions right &ndash;&gt;-->
+                    <!--<div class="swipeout-actions-right">-->
+                        <!--&lt;!&ndash; Swipeout actions links/buttons &ndash;&gt;-->
+                        <!--<a class="bg-danger swipeout-delete " href="#" data-confirm="确定要删除该商品吗？" data-confirm-title="提示">删除</a>-->
+                        <!--<a class="swipeout-close" href="#">取消</a>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="swipeout product" onclick="product_select(this)">-->
+                    <!--<input type="hidden" class="item_id" value="1">-->
+                    <!--&lt;!&ndash; Usual list element wrapped with "swipeout-content" &ndash;&gt;-->
+                    <!--<div class="swipeout-content">-->
+                        <!--<label class="label-checkbox item-content ">-->
+                            <!--<input type="checkbox" name="product" class="product_select">-->
+                            <!--<div class="item-media">-->
+                                <!--<i class="icon icon-form-checkbox" style="margin-left: -10px;width: 15px;height: 15px"></i>-->
+                                <!--<img src="../img/1.png" alt="">-->
+                            <!--</div>-->
+                            <!--<div class="item-inner">-->
+                                <!--<div class="item-text" ><b>【新品】大盘鸡拌面，新疆特产新</b></div>-->
+                                <!--<div class="item-text">-->
+                                    <!--<span class="kind">小碗/微辣</span>-->
+                                    <!--<span class="price">￥<span class="product_price">188</span>元</span>-->
+                                    <!--<span class="number">x<span class="product_number">3</span></span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; Swipeout actions right &ndash;&gt;-->
+                    <!--<div class="swipeout-actions-right">-->
+                        <!--&lt;!&ndash; Swipeout actions links/buttons &ndash;&gt;-->
+                        <!--<a class="bg-danger swipeout-delete " href="#" data-confirm="确定要删除该商品吗？" data-confirm-title="提示">删除</a>-->
+                        <!--<a class="swipeout-close" href="#">取消</a>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </div>
+    </div>
+    <!--<script>-->
+        <!--$(function () {-->
+            <!--$('.swipeout').on('deleted', function () {-->
+                <!--delete_product(this);-->
+            <!--});-->
+        <!--})-->
+    <!--</script>-->
+    <!--底部结算 -->
+    <footer class="footer" style="z-index: 1000;position: fixed;bottom: 45px;background-color: lightgoldenrodyellow;border-top: 1px solid gainsboro">
+        <div style="width: 20%">
+            <label class="label-checkbox item-content" onclick="all_select(this)" style="height: 20px;background-color: white">
+                <input type="checkbox" name="all_select" class="all_select">
+                <div class="item-media store_name_checkbox">
+                    <i class="icon icon-form-checkbox" style="width: 15px;height: 15px;margin-top: 15px;margin-left: 7px"></i>
+                </div>
+                <div class="item-inner ">
+                    <div class="item-text" style="margin-left: 5px;line-height: 45px" >全选</div>
+                </div>
+            </label>
+        </div>
+        <div style="width: 50%" class="open-popup open-about  "  data-popup=".popup-about">合计:￥<span class="total_price">0.00</span>元</div>
+        <div style="width: 30%;font-size: .7rem" class="buy open-popup open-about"  data-popup=".popup-about">结算</div>
+    </footer>
+</div>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="order" extends="json-default">
+
+        <global-results>
+            <result name="error">/error.html</result>
+        </global-results>
+
+        <action name="order_*" class="orderAction" method="{1}">
+            <result name="flag" type="json">
+                <param name="root">flag</param>
+            </result>
+            <result name="data" type="json">
+                <param name="root">data</param>
+            </result>
+        </action>
+    </package>
+
+</struts>

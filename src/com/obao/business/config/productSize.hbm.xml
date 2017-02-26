@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.obao.business.entity">
+    <class name="ProductSize" table="t_product_size" >
+        <id name="sizeId" type="integer">
+            <column name="size_id" />
+            <generator class="native" />
+        </id>
+        <property name="size" type="string" >
+            <column name="size" />
+        </property>
+        <property name="remark" type="string" >
+            <column name="remark" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.obao.user.entity">
+
+	<class name="Footprint" table="t_footprint">
+		<id name="footId" type="integer">
+			<column name="foot_id" />
+			<generator class="native" />
+		</id>
+		<property name="userId" type="integer">
+			<column name="user_id"/>
+		</property>
+		<property name="productId" type="integer">
+			<column name="product_id"/>
+		</property>
+		<property name="addTime" type="timestamp">
+			<column name="add_time"/>
+		</property>
+
+
+	</class>
+</hibernate-mapping>

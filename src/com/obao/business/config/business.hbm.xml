@@ -29,7 +29,7 @@
         <property name="registerTime" type="date" >
             <column name="register_time" />
         </property>
-        <property name="remark" type="date" >
+        <property name="remark" type="string" >
             <column name="remark"  default="无"/>
         </property>
     <property name="name" type="string" >

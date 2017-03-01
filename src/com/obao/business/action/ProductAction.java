@@ -35,18 +35,23 @@ public class ProductAction extends ActionSupport {
 	 * 商品详情
 	 */
 	public String detail(){
-        Object  productDetail =productService.findDetailById(id);
-		List<Object> flavors =  productService.findFlavor(id);
-		List<Object> sizes = productService.findSize(id);
-		Integer collect= productService.isCollect(id,userId);
-		//package data
-		Map<String ,Object> data = new HashMap<String, Object>();
-		data.put("isCollect",collect);
-		data.put("sizes", sizes);
-		data.put("flavors",flavors);
-		data.put("detail", productDetail);
-        resultData = resultData.success(data);
-        return "resultData";
+		try {
+			Object productDetail = productService.findDetailById(id);
+			List<Object> flavors = productService.findFlavor(id);
+			List<Object> sizes = productService.findSize(id);
+			Integer collect = productService.isCollect(id, userId);
+			//package data
+			Map<String, Object> data = new HashMap<String, Object>();
+			data.put("isCollect", collect);
+			data.put("sizes", sizes);
+			data.put("flavors", flavors);
+			data.put("detail", productDetail);
+			resultData = resultData.success(data);
+			return "resultData";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	/**
 	 * 模糊查询商品列表

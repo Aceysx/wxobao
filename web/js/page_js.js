@@ -5,17 +5,18 @@ $(function () {
         paginationClickable:true,
         slidesPerView:'auto',
         centeredSlides:true,
-        effect:"cube",
+        effect:"coverflow",
         speed: 500,
         autoplay:2000,
-        cube: {
-            slideShadows: true,
-            shadow: true,
-            shadowOffset: 10,
-            shadowScale: 0.6
-        },
     })
-
+// 时间控件js   下单页面时间插件
+    $(".datetime-picker").datetimePicker({
+        toolbarTemplate: '\
+            <header class="bar bar-nav">\
+                <button class="button button-link pull-right close-picker">确定</button>\
+                <h1 class="title">选择日期和时间</h1>\
+            </header>'
+    });
 });
 
 //商品详情
@@ -83,7 +84,9 @@ function isBuy(){
         add_shopping_ajax(cart_data);
     }
     if($(".ok").hasClass("buying")){
-        $.toast("buy");
+        $.router.replacePage('/client/placeorder.html');
+        $("#info_popup-about").addClass("close-popup");
+
     }
 }
 
@@ -185,4 +188,14 @@ function show_notification(title,text,img_url) {
             $.alert("Click" + data);
         }
     });
+}
+
+//计算价格 下单页面
+function place_order_allprice() {
+    var place_order_allprice = 0;
+    var product =  $(".placeorder_product");
+    for(var i = 0;i < product.length; ++i){
+        place_order_allprice += $(product[i]).find(".place_order_price").text() * $(product[i]).find(".place_order_number").text();
+    }
+    $(".placeorder_total_price").text(place_order_allprice);
 }

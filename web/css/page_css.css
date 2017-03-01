@@ -102,3 +102,10 @@ img{border-radius: 0.15rem;}
 #orders .tab-link{font-size: 0.7rem}
 #orders .content-block{margin: 0px;padding: 0}
 #orders img{width: 3rem;height: 3rem;border-radius: 1.5rem}
+
+/*placeorder*/
+.placeorder_product{margin-bottom: 1.5rem}
+#page_placeorder .number{float: right;margin-top: 0.3rem}
+.placeorder_price{margin-top: 0.3rem}
+.placeorder_kinds{margin-top: 0.3rem}
+.choose_time{margin-top: -1px}

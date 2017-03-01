@@ -52,9 +52,15 @@ public class ProductDao implements IProductDao{
     }
 
     @Override
-    public List<Product> searchProductList(String content) {
-        return sessionFactory.getCurrentSession().createSQLQuery("select * from t_product  where product_name like ? ").addEntity(Product.class)
-                .setParameter(0,"%"+content+"%").list();
+    public List<Object> searchProductList(String content) {
+        StringBuffer sql = new StringBuffer();
+        sql.append(" select b.name,p.product_id,p.product_img,p.product_name,p.sales,p.new_price from t_product p ");
+        sql.append(" left join(select t.name,t.business_id from t_business t ) b on p.business_id = b.business_id ");
+        sql.append(" where p.product_name like '%").append(content).append("%' ");
+        if("".equals(content.trim())){
+            sql.append(" limit 1,10");
+        }
+        return sessionFactory.getCurrentSession().createSQLQuery(sql.toString()).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
     }
 
     @Override

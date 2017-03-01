@@ -10,12 +10,11 @@ public class Product {
     private Integer productId;//商品id
     private String productName;//商品名
     private String productImg;//商品图片
-    private String productDetails;//商品详情
     private double oldPrice;//原价
     private double newPrice;//促销价
     private Date addTime;//添加时间
     private Integer state;//状态 0 正常 1 删除
-    private String remark;//备注
+    private String remark;//商品详情
     private Integer promotion;//是否促销 0不是 1 是
     private Integer sales = 0;//销量
 
@@ -58,13 +57,6 @@ public class Product {
         this.productImg = productImg;
     }
 
-    public String getProductDetails() {
-        return productDetails;
-    }
-
-    public void setProductDetails(String productDetails) {
-        this.productDetails = productDetails;
-    }
 
     public double getOldPrice() {
         return oldPrice;

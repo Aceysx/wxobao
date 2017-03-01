@@ -53,6 +53,11 @@ $(document).on("pageInit",function (e,pageId,$page) {
         product_detail_ajax(ids[1]);
     }
 
+    //product_search page //模糊搜索
+    if(pageId == "product_search"){
+        product_search();
+    }
+
     //orders page
     if(pageId == "page_orders"){
     }

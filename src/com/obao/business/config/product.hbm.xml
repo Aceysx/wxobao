@@ -13,9 +13,6 @@
         <property name="productImg" type="string">
             <column name="product_img"/>
         </property>
-        <property name="productDetails" type="string">
-            <column name="product_details" sql-type="LONGTEXT"/>
-        </property>
         <property name="oldPrice" type="double">
             <column name="old_price"/>
         </property>

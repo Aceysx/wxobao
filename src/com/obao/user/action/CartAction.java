@@ -48,7 +48,6 @@ public class CartAction extends ActionSupport {
      * @return
      */
     public String delete(){
-        System.out.println(item.getProductItemId());
         try {
             cartService.delete(item);
             resultData = resultData.success("删除成功");

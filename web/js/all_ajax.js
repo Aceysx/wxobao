@@ -1,5 +1,6 @@
-// var host = "http://192.168.0.153:8080/";
-var host = "http://localhost:8080/";
+// var host = "http://192.168.1.109:8080/";
+// var host = "http://localhost:8080/";
+var host = "http://obao.tunnel.2bdata.com/";
 var host_img = host+"/upload/";
 var uid = 2;
 //商品详情
@@ -27,9 +28,45 @@ function banners_ajax() {
     })
 }
 
+//模糊搜索
+function product_search() {
+    var msg = $("#search").val().trim();
+    $.ajax({
+        url:host+"product_searchList.htm",
+        type:"post",
+        data:{msg:msg},
+        success:function (data) {
+            if(data.result){
+                $("#products_search").html("");
+                var _html = "";
+                if(data.msg != ""){
+                    _html = "<p style='text-align: center;' >"+data.msg+"</p>"
+                    $("#products_search").append(_html);
+                    return true;
+                }
+                data = data.data;
+                for(var i = 0; i < data.length; ++i){
+                    new_price = data[i].new_price;
+                    pname = data[i].product_name;
+                    bname = data[i].name;
+                    id = data[i].product_id;
+                    pimg_url = host_img+"product/"+data[i].product_img;
+                    sales = data[i].sales;
+
+                    _html += "<li><a href='product_info.html?"+id+"' class='item-link item-content'>";
+                    _html += "<div class='item-media'><img src='"+pimg_url+"'></div>";
+                    _html += "<div class='item-inner'><div class='item-title produt_name_style'><b style='product_name_style'>"+pname+"</b></div>";
+                    _html += "<div class='item-title'><i>"+bname+"</i></div>";
+                    _html += "<div class='item-title-row'><div class='item-title'><font color='red'><b>价格: $ "+new_price+"</b></font></div>";
+                    _html += "<div class='item-after'>销量:"+sales+"</div></div></div></a></li>";
+                }
+                $("#products_search").append(_html);
+            }
+        }
+    })
+}
 //区域范围信息
 function range_ajax() {
-
     $.ajax({
         url:host+"product_domains.htm",
         type:"post",
@@ -77,8 +114,8 @@ function promotion_products_ajax() {
                         _html += "<li><a href='product_info.html?"+id+"' class='item-link item-content'>";
                         _html += "<div class='item-media'><img src='"+img_url+"' ></div>";
                         _html += "<div class='item-inner'><div class='item-title '><b style='product_name_style'>"+name+"</b></div>";
-                        _html += "<div class='item-title'>  </div><div class='item-title'>销量："+sales+" </div>";
-                        _html += "<div class='item-title-row'><div class='item-title price_style'>$ <b>"+price+"</b></div>";
+                        _html += "<div class='item-title'>  </div><div class='item-title price_style'>$ <b>"+price+"</b></div>";
+                        _html += "<div class='item-title-row'><div class='item-title '>销量："+sales+" </div>";
                         _html += "</div></div></a></li>";
                     }
                     $("#promotion").append(_html);
@@ -110,8 +147,8 @@ function hot_products_ajax() {
                     _html += "<li><a href='product_info.html?"+id+"' class='item-link item-content'>";
                     _html += "<div class='item-media'><img src='"+img_url+"' ></div>";
                     _html += "<div class='item-inner'><div class='item-title '><b style='product_name_style'>"+name+"</b></div>";
-                    _html += "<div class='item-title'>  </div><div class='item-title'>销量："+sales+" </div>";
-                    _html += "<div class='item-title-row'><div class='item-title price_style'>$ <b>"+price+"</b></div>";
+                    _html += "<div class='item-title'>  </div><div class='item-title price_style'>$ <b>"+price+"</b></div>";
+                    _html += "<div class='item-title-row'><div class='item-title '>销量："+sales+" </div>";
                     _html += "</div></div></a></li>";
                 }
                 $("#hot").append(_html);
@@ -281,7 +318,7 @@ function collection_ajax() {
     $.ajax({
         url:host+"collect_findUserAll.htm",
         type:"post",
-        data:{"user.userId":uid},
+        data:{"userId":uid},
         success:function (data) {
             if(data.result == true){
                 data = data.data;
@@ -314,7 +351,7 @@ function remove_collecton_ajax(t,e,pid) {
     $.ajax({
         url:host+"collect_add.htm",
         type:"post",
-        data:{"product.productId":pid,"user.userId":uid},
+        data:{"productId":pid,"userId":uid},
         success:function (data) {
             $.hidePreloader();
             if(data.result){
@@ -332,7 +369,7 @@ function add_collection_ajax(t,pid) {
     $.ajax({
         url:host+"collect_add.htm",
         type:"post",
-        data:{"product.productId":pid,"user.userId":uid},
+        data:{"productId":pid,"userId":uid},
         success:function (data) {
             $.hidePreloader();
             if(data.result){

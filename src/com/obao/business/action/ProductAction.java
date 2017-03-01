@@ -10,6 +10,7 @@ import com.obao.user.entity.Banner;
 
 import com.obao.business.service.IProductService;
 import com.obao.user.entity.Collect;
+import com.obao.util.Constant;
 import com.obao.util.InvokeResult;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -25,7 +26,6 @@ public class ProductAction extends ActionSupport {
 	private String userPicContentType;
 	private Integer start; //分页开始
 	private Integer end;
-	private Integer num = 10;//热门商品查询数量
 	private Integer id;
 	private Integer userId;
 	private InvokeResult  resultData;
@@ -53,9 +53,12 @@ public class ProductAction extends ActionSupport {
 	 * @return
 	 */
 	public String searchList(){
-        List<Product> products = productService.searchProductList(msg);
+		List<Object> products = productService.searchProductList(msg);
 		resultData = resultData.success(products);
-        return "resultData";
+		if(products.size() == 0){
+			resultData.setMsg(Constant.NOT_SEARCH_TIP);
+		}
+		return "resultData";
 	}
 
 	/**
@@ -70,7 +73,7 @@ public class ProductAction extends ActionSupport {
 	 * 热门商品查询列表
 	 */
 	public String hotProducts() {
-        List<Product> products = productService.findHotProducts(num);
+        List<Product> products = productService.findHotProducts(Constant.HOT_NUMBER);
 		resultData = resultData.success(products);
         return "resultData";
 	}
@@ -173,14 +176,6 @@ public class ProductAction extends ActionSupport {
 		return end;
 	}
 
-	public void setNum(Integer num) {
-		this.num = num;
-	}
-
-	public Integer getNum() {
-		return num;
-	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -205,4 +200,5 @@ public class ProductAction extends ActionSupport {
 	public void setResultData(InvokeResult resultData) {
 		this.resultData = resultData;
 	}
+
 }

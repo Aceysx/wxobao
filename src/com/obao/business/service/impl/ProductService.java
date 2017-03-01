@@ -46,7 +46,7 @@ public class ProductService implements IProductService {
 	}
 
     @Override
-    public List<Product> searchProductList(String content) {
+    public List<Object> searchProductList(String content) {
         return productDao.searchProductList(content);
     }
 

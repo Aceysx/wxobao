@@ -1,6 +1,5 @@
 package com.obao.business.action;
 
-import com.obao.business.entity.Business;
 import com.obao.business.service.IBusinessService;
 import com.obao.util.InvokeResult;
 import com.opensymphony.xwork2.ActionSupport;
@@ -13,7 +12,6 @@ import java.util.List;
  */
 public class BusinessAction extends ActionSupport {
     private IBusinessService businessService;
-
 
     private Integer id;
     private InvokeResult resultData;
@@ -34,6 +32,8 @@ public class BusinessAction extends ActionSupport {
         resultData = resultData.success(business);
         return "resultData";
     }
+
+
 
     public void setBusinessService(IBusinessService businessService) {
         this.businessService = businessService;

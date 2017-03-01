@@ -41,7 +41,7 @@ public interface IProductService {
     /**
      * 模糊查询商品列表
      */
-    List<Product> searchProductList(String content);
+    List<Object> searchProductList(String content);
 
     /**
      * 查找促销商品

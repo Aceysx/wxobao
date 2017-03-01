@@ -26,19 +26,19 @@ public class CollectDao implements ICollectDao {
     }
 
     @Override
-    public List<Object> findUserAllCollect(User user) {
+    public List<Object> findUserAllCollect(Integer userId) {
         StringBuffer sql = new StringBuffer();
         sql.append(" SELECT p.product_id,p.product_name,p.product_img,p.sales,p.new_price FROM t_product p ");
-        sql.append(" left join(select user_id,product_id from t_collect) c on c.user_id =").append(user.getUserId());
+        sql.append(" left join(select user_id,product_id from t_collect) c on c.user_id =").append(userId);
         sql.append(" where p.product_id = c.product_id ");
         return sessionFactory.getCurrentSession().createSQLQuery(sql.toString()).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
     }
 
     @Override
-    public List<Collect> isExist(Product product, User user) {
+    public List<Collect> isExist(Integer productId, Integer userId) {
        return  sessionFactory.getCurrentSession().createQuery("from Collect c where c.user.userId=? and c.product.productId=?")
-                .setParameter(0, user.getUserId())
-                .setParameter(1, product.getProductId())
+                .setParameter(0, userId)
+                .setParameter(1, productId)
                 .list();
     }
 

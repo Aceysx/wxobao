@@ -85,6 +85,10 @@ public class RenzhengAction extends ActionSupport {
         }
         return "index";
     }
+
+
+
+
     public String getSignature() {
         return signature;
     }

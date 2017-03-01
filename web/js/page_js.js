@@ -17,6 +17,7 @@ $(function () {
     })
 
 });
+
 //商品详情
     //collection图标状态改变
 function change_collect(t){

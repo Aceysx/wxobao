@@ -111,7 +111,7 @@ function promotion_products_ajax() {
                          price = data[i].new_price;
                          name = data[i].product_name;
 
-                        _html += "<li><a href='product_info.html?"+id+"' class='item-link item-content'>";
+                        _html += "<li><a href='product_info.html?"+id+"?"+new Date().getTime()+"' class='item-link item-content'>";
                         _html += "<div class='item-media'><img src='"+img_url+"' ></div>";
                         _html += "<div class='item-inner'><div class='item-title '><b style='product_name_style'>"+name+"</b></div>";
                         _html += "<div class='item-title'>  </div><div class='item-title price_style'>$ <b>"+price+"</b></div>";

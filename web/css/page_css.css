@@ -66,13 +66,14 @@ img{border-radius: 0.15rem;}
 #page_product_info .content-block{margin: 0}
 #page_product_info .list-block{margin: 0 0 1rem 0 }
 #page_product_info .swiper-slide img{width: 100%;}
+#product_detail{margin-bottom: 2.5rem}
 .price{color: gray;font-size: 0.6rem;padding: 0;margin: 0}
 #page_product_info .item-title{font-size: 0.65rem;font-weight: bolder}
 #bargain_price{font-size: .7rem;color: red;font-weight: bold}
 #product_name{font-size: .75rem;color: black;font-weight: 700}
 #sales{float: right}
 .hasCollect{color: #21a1a1;font-weight: bold}
-#product_foot{position: fixed;bottom: 0px;height: 2.5rem;border-top:1px solid gainsboro}
+#product_foot{position: fixed;bottom: 0px;height: 2.5rem;border-top:1px solid gainsboro;}
 
 .add{background-color: darkorange;color: white;line-height: 2.5rem;}
 .buy{background-color: orangered;color: white;font-size: .6rem;line-height: 2.5rem;font-weight: bold}

@@ -8,7 +8,7 @@ $(document).on('refresh', '.pull-to-refresh-content',function(e) {
     hot_products_ajax();
     // done
     $.pullToRefreshDone('.pull-to-refresh-content');
-    $.toast("refresh success");
+    $.toast("刷新成功");
 });
 //ajax页面跳转刷新
 $(document).on("pageInit",function (e,pageId,$page) {

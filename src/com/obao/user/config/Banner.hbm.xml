@@ -8,10 +8,10 @@
 			<column name="banner_id" />
 			<generator class="native" />
 		</id>
-		<property name="img" type="string">
-			<column name="img" />
+		<property name="productId" type="integer">
+			<column name="product_id"/>
 		</property>
-		<property name="addTime" type="java.util.Date">
+		<property name="addTime" type="timestamp">
 			<column name="add_time" />
 		</property>
 		<property name="url" type="string">

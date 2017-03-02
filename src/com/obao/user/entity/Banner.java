@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class Banner {
     private Integer bannerId;
-    private String img;
+    private Integer productId;
     private Date addTime;
     private String url;
     private Integer show;//是否显示 0 不显示 1显示
@@ -19,10 +19,6 @@ public class Banner {
 
     public String getUrl() {
         return url;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
     }
 
     public void setAddTime(Date addTime) {
@@ -41,9 +37,6 @@ public class Banner {
         return bannerId;
     }
 
-    public String getImg() {
-        return img;
-    }
 
     public Date getAddTime() {
         return addTime;
@@ -52,4 +45,13 @@ public class Banner {
     public Integer getShow() {
         return show;
     }
+
+    public Integer getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Integer productId) {
+        this.productId = productId;
+    }
 }
+

@@ -1,6 +1,6 @@
 // var host = "http://192.168.1.109:8080/";
-var host = "http://localhost:8080/";
-// var host = "http://obao.tunnel.2bdata.com/";
+// var host = "http://localhost:8080/";
+var host = "http://obao.tunnel.2bdata.com/";
 var host_img = host+"/upload/";
 var uid = 2;
 //商品详情

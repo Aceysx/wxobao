@@ -1,3 +1,15 @@
+<script>
+    $(function () {
+        // 时间控件js   下单页面时间插件
+        $(".datetime-picker").datetimePicker({
+            toolbarTemplate: '\
+            <header class="bar bar-nav">\
+                <button class="button button-link pull-right close-picker">确定</button>\
+                <h1 class="title">选择日期和时间</h1>\
+            </header>'
+        });
+    })
+</script>
 <div class="page no-tabbar" id="page_placeorder">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left back" >

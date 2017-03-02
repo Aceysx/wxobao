@@ -1,6 +1,6 @@
 // var host = "http://192.168.1.109:8080/";
-// var host = "http://localhost:8080/";
-var host = "http://obao.tunnel.2bdata.com/";
+var host = "http://localhost:8080/";
+// var host = "http://obao.tunnel.2bdata.com/";
 var host_img = host+"/upload/";
 var uid = 2;
 //商品详情
@@ -22,6 +22,7 @@ function banners_ajax() {
                 data = data.data;
                 for(var i = 0; i < data.length; ++i) {
                   $("#banner_id_"+i).find("img").attr({src:host_img+"/banner/"+data[i].url});
+                  $("#banner_id_"+i).find("a").attr({href:"product_info.html?"+data[i].productId+"?"+new Date().getTime()});
                 }
             }
         }

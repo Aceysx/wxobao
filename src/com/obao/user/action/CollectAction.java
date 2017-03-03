@@ -31,7 +31,7 @@ public class CollectAction extends ActionSupport {
             Integer id = collectService.isExist(productId, userId);
             if (id != 0) {
                 collectService.delete(id);
-                resultData = resultData.success(Constant.ADD_COLLECT);
+                resultData = resultData.success(Constant.CANCEL_COLLECT);
                 return "resultData";
             } else {
                 Collect collect = new Collect();
@@ -44,7 +44,7 @@ public class CollectAction extends ActionSupport {
                 collect.setProduct(product);
                 collect.setAddDate(new Date());
                 collectService.save(collect);
-                resultData = resultData.success(Constant.CANCEL_COLLECT);
+                resultData = resultData.success(Constant.ADD_COLLECT);
                 return "resultData";
             }
         }

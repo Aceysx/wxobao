@@ -481,6 +481,7 @@ function delete_product_item_ajax(item_id) {
 }
 //下单页面填充
 function buy_to_order() {
+
     var productId = product_info.product_id;
     var businessId = product_info.business_id;
     var pimg = host_img + "product/"+product_info.product_img;
@@ -490,7 +491,7 @@ function buy_to_order() {
     var classifys = flavor +" "+ size ;
     var price = size_index == -1 ? product_info.new_price : sizes[size_index].price;
     var buyNumber = number;
-    var currTime = new Date().toLocaleDateString();
+
 
     var _html = "";
     _html += "<div class='placeorder_product'> <div class='list-block media-list'><ul><li ><a href='#' class='item-link item-content'>";
@@ -503,14 +504,12 @@ function buy_to_order() {
     _html += "<div class='item-content'><div class='item-inner'><div class='item-title label'>取餐时间：</div><div class='item-input'>";
     _html += "<input type='hidden' class='businessId'  value='"+businessId+"'/>";
     _html += "<input type='hidden' class='productId'  value='"+productId+"'/>";
-    _html += "<input type='text' class='open-picker order_remark datetime-picker'  value='"+currTime+"'/>";
-    _html += "<script>$('.datetime-picker').datetimePicker({";
-    _html += "toolbarTemplate: '<header class='bar bar-nav'>\ ";
-    _html += "<button class='button button-link pull-right close-picker' style='color: orangered;font-weight: bolder'>确定</button>\ ";
-    _html += "<h1 class='title' style='color: white'>选择日期和时间</h1>\</header>'});</script></div></div></div>";
+    _html += "<input type='datetime-local' class='order_remark ' style='color: #21a1a1;font-size: .6rem;font-weight: bolder'  value=''/>";
+    _html += "</div></div></div>";
     _html += "<div class='item-content'><div class='item-inner'><div class='item-title label'>买家留言：</div>";
     _html += "<div class='item-input'><input type='text' class='order_remark' style='font-size: .6rem' placeholder='给店家留言'/>";
     _html += "</div></div></div></li></ul></div></div>";
 
     $("#order_content").append(_html);
+    place_order_allprice();
 }

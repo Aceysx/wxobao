@@ -9,7 +9,6 @@ $(function () {
         speed: 500,
         autoplay:2000,
     })
-
     //判断用户是否非法进入主页
     // saveOpenid();
 });

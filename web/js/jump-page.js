@@ -62,6 +62,9 @@ $(document).on("pageInit",function (e,pageId,$page) {
     if(pageId == "page_orders"){
     }
 
+    if(pageId == "page_placeorder"){
+        buy_to_order();
+    }
 })
 
 //let location href split by "?"

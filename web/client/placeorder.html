@@ -1,15 +1,4 @@
-<script>
-    $(function () {
-        // 时间控件js   下单页面时间插件
-        $(".datetime-picker").datetimePicker({
-            toolbarTemplate: '\
-            <header class="bar bar-nav">\
-                <button class="button button-link pull-right close-picker">确定</button>\
-                <h1 class="title">选择日期和时间</h1>\
-            </header>'
-        });
-    })
-</script>
+
 <div class="page no-tabbar" id="page_placeorder">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left back" >
@@ -17,58 +6,69 @@
             </a>
             <h1 class='title'>确认订单</h1>
         </header>
-    <div class="content">
-        <div class="placeorder_product"> <!--商品开始-->
-                <div class="list-block media-list">
-                    <ul>
-                        <li >
-                            <a href="product_info.html" class="item-link item-content">
-                                <div class="item-media">
-                                     <img src="../img/1.png" width="68rem" height="68rem">
-                                </div>
-                                <div class="item-inner">
-                                <div class="item-title produt_name_style"><b>烤肉饭</b></div>
-                                <div class="item-title placeorder_kinds">大碗/中辣</div>
-                                <div class="item-title number">数量:<span class="place_order_number">20</span></div>
-                                <div class="item-title-row">
-                                <div class="item-title price_style placeorder_price"><b>￥<span class="place_order_price">20</span>元</b></div>
-                                </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            <!--<div class="content-block">-->
-                <div class="list-block choose_time">
-                    <ul>
-                        <!-- Text inputs -->
-                        <li>
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <div class="item-title label">取餐时间：</div>
-                                    <div class="item-input">
-                                        <input type="text" placeholder="" class='datetime-picker' value="2016-12-12 13:20"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <div class="item-title label">买家留言：</div>
-                                    <div class="item-input">
-                                        <input type="text" placeholder="Your message"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-        </div>    <!--商品结束-->
+    <div class="content" id="order_content">
+        <!--<div class="placeorder_product"> &lt;!&ndash;商品开始&ndash;&gt;-->
+                <!--<div class="list-block media-list">-->
+                    <!--<ul>-->
+                        <!--<li >-->
+                            <!--<a href="#" class="item-link item-content">-->
+                                <!--<div class="item-media">-->
+                                     <!--<img src="../img/1.png" width="68rem" height="68rem">-->
+                                <!--</div>-->
+                                <!--<div class="item-inner">-->
+                                <!--<div class="item-title produt_name_style"><b>烤肉饭</b></div>-->
+                                <!--<div class="item-title placeorder_kinds">大碗/中辣</div>-->
+                                <!--<div class="item-title number">数量:<span class="place_order_number">20</span></div>-->
+                                <!--<div class="item-title-row">-->
+                                <!--<div class="item-title price_style placeorder_price"><b>￥<span class="place_order_price">20</span>元</b></div>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--&lt;!&ndash;<div class="content-block">&ndash;&gt;-->
+                <!--<div class="list-block choose_time">-->
+                    <!--<ul>-->
+                        <!--&lt;!&ndash; Text inputs &ndash;&gt;-->
+                        <!--<li>-->
+                            <!--<div class="item-content">-->
+                                <!--<div class="item-inner">-->
+                                    <!--<div class="item-title label">取餐时间：</div>-->
+                                    <!--<div class="item-input">-->
+                                        <!--<input type="text" class="open-picker"  id='datetime-picker' value="1999-01-11 15:50"/>-->
+                                        <!--<script>-->
+                                            <!--$("#datetime-picker").datetimePicker({-->
+                                                <!--toolbarTemplate: '<header class="bar bar-nav">\-->
+                                                <!--<button class="button button-link pull-right close-picker" style="color: orangered;font-weight: bolder">确定</button>\-->
+                                                <!--<h1 class="title" style="color: white">选择日期和时间</h1>\-->
+                                                <!--</header>'-->
+                                            <!--});-->
+                                        <!--</script>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="item-content">-->
+                                <!--<div class="item-inner">-->
+                                    <!--<div class="item-title label">买家留言：</div>-->
+                                    <!--<div class="item-input">-->
+                                        <!--<input type="text" style="font-size: .6rem" placeholder="给店家留言"/>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+        <!--</div>    &lt;!&ndash;商品结束&ndash;&gt;-->
         <!--底部导航-->
         <footer class="footer" style="z-index: 1000;position: fixed;bottom: 0px;background-color: lightgoldenrodyellow;border-top: 1px solid gainsboro">
             <div style="width: 20%">
             </div>
-            <div style="width: 50%" class="open-popup open-about  "  data-popup=".popup-about">合计:￥<span class="total_price placeorder_total_price">0.00</span>元</div>
-            <div style="width: 30%;font-size: .7rem" class="buy open-popup open-about"  data-popup=".popup-about">确认下单</div>
+            <div style="width: 50%"  data-popup=".popup-about">合计:￥<span class="total_price placeorder_total_price">0.00</span>元</div>
+            <div style="width: 30%;font-size: .7rem" class="buy "  data-popup=".popup-about">确认下单</div>
         </footer>
     </div>
 </div>
+<script>
+
+</script>

@@ -87,8 +87,7 @@ img{border-radius: 0.15rem;}
 #business_list img{height:3.0rem;width: 3.0rem;border-radius:1.5rem  }
 
 
-
-    /*business_info page*/
+/*business_info page*/
 #business_info{background: #21a1a8;margin-top: -1px;color: white;border-bottom: 10px solid ghostwhite;}
 #business_info img{height:3.0rem;width: 3.0rem;border-radius: 1.5rem; }
 #business_products img{height: 3.0rem;width: 3.0rem;}
@@ -104,6 +103,7 @@ img{border-radius: 0.15rem;}
 #orders img{width: 3rem;height: 3rem;border-radius: 1.5rem}
 
 /*placeorder*/
+#page_placeorder .content{margin-bottom: 0}
 .placeorder_product{margin-bottom: 1.5rem}
 #page_placeorder .number{float: right;margin-top: 0.3rem}
 .placeorder_price{margin-top: 0.3rem}

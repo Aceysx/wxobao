@@ -11,6 +11,7 @@ var flavor_index = -1;//口味下标
 var isCollect;//是否收藏 1收藏 0未收藏
 var product_info;//商品详情信息
 var number = 1;//购买数量 默认为1
+
 //轮播图
 function banners_ajax() {
     $.ajax({
@@ -190,7 +191,6 @@ function business_list_ajax(bid) {
         }
     });
 }
-
 //店铺
 function business_info_ajax(bid) {
     $.ajax({
@@ -238,7 +238,6 @@ function business_info_ajax(bid) {
         }
     });
 }
-
 //商品详情
 function product_detail_ajax(pid) {
     //图片自适应
@@ -313,7 +312,6 @@ function product_detail_ajax(pid) {
         }
     })
 }
-
 //收藏页面
 function collection_ajax() {
     $.ajax({
@@ -480,4 +478,39 @@ function delete_product_item_ajax(item_id) {
             $.toast(data.data);
         }
     })
+}
+//下单页面填充
+function buy_to_order() {
+    var productId = product_info.product_id;
+    var businessId = product_info.business_id;
+    var pimg = host_img + "product/"+product_info.product_img;
+    var productName = product_info.product_name;
+    var flavor = flavor_index == -1 ? "" : flavors[flavor_index].name;
+    var size = size_index == -1 ? "" : sizes[size_index].size;
+    var classifys = flavor +" "+ size ;
+    var price = size_index == -1 ? product_info.new_price : sizes[size_index].price;
+    var buyNumber = number;
+    var currTime = new Date().toLocaleDateString();
+
+    var _html = "";
+    _html += "<div class='placeorder_product'> <div class='list-block media-list'><ul><li ><a href='#' class='item-link item-content'>";
+    _html += "<div class='item-media'><img src='"+pimg+"' width='68rem' height='68rem'></div><div class='item-inner'>";
+    _html += "<div class='item-title produt_name_style'><b>"+productName+"</b></div>";
+    _html += "<div class='item-title placeorder_kinds'>"+classifys+"</div>";
+    _html += "<div class='item-title number'>数量:<span class='place_order_number'>"+buyNumber+"</span></div><div class='item-title-row'>";
+    _html += "<div class='item-title price_style placeorder_price'><b>￥<span class='place_order_price'>"+price+"</span>元</b></div>";
+    _html += "</div></div></a></li></ul></div><div class='list-block choose_time'><ul><li>";
+    _html += "<div class='item-content'><div class='item-inner'><div class='item-title label'>取餐时间：</div><div class='item-input'>";
+    _html += "<input type='hidden' class='businessId'  value='"+businessId+"'/>";
+    _html += "<input type='hidden' class='productId'  value='"+productId+"'/>";
+    _html += "<input type='text' class='open-picker order_remark datetime-picker'  value='"+currTime+"'/>";
+    _html += "<script>$('.datetime-picker').datetimePicker({";
+    _html += "toolbarTemplate: '<header class='bar bar-nav'>\ ";
+    _html += "<button class='button button-link pull-right close-picker' style='color: orangered;font-weight: bolder'>确定</button>\ ";
+    _html += "<h1 class='title' style='color: white'>选择日期和时间</h1>\</header>'});</script></div></div></div>";
+    _html += "<div class='item-content'><div class='item-inner'><div class='item-title label'>买家留言：</div>";
+    _html += "<div class='item-input'><input type='text' class='order_remark' style='font-size: .6rem' placeholder='给店家留言'/>";
+    _html += "</div></div></div></li></ul></div></div>";
+
+    $("#order_content").append(_html);
 }

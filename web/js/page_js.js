@@ -9,16 +9,9 @@ $(function () {
         speed: 500,
         autoplay:2000,
     })
-// 时间控件js   下单页面时间插件
-//     $(".datetime-picker").datetimePicker({
-//         toolbarTemplate: '\
-//             <header class="bar bar-nav">\
-//                 <button class="button button-link pull-right close-picker">确定</button>\
-//                 <h1 class="title">选择日期和时间</h1>\
-//             </header>'
-//     });
+
     //判断用户是否非法进入主页
-    saveOpenid();
+    // saveOpenid();
 });
 
 //商品详情
@@ -69,29 +62,36 @@ function show_price() {
 }
     //加入购物车 or 购买
 function buy(){
+    $("#info_popup-about").removeClass("close-popup");
     $(".ok").removeClass("shopping").addClass("buying");
 }
 function add(){
+    $("#info_popup-about").removeClass("close-popup");
     $(".ok").removeClass("buying").addClass("shopping");
 }
-function isBuy(){
-    if($(".ok").hasClass("shopping")){
-        var cart_data = {'item.userId':uid,
-            'item.productId':product_info.product_id,
-            'item.flavorAndProduct':flavor_index == -1 ? "" : flavors[flavor_index].name,
-            'item.productNumber':number,
-            'item.sizeAndProduct':size_index == -1 ? "" : sizes[size_index].size,
-            'item.businessId':product_info.business_id,
-            'item.price':size_index == -1 ? product_info.new_price : sizes[size_index].price}
+function isBuy() {
+    $(".buy_href").removeAttr("href");
+    $("#info_popup-about").removeClass("close-popup");
+    //添加购物车
+    if ($(".ok").hasClass("shopping")) {
+        var cart_data = {
+            'item.userId': uid,
+            'item.productId': product_info.product_id,
+            'item.flavorAndProduct': flavor_index == -1 ? "" : flavors[flavor_index].name,
+            'item.productNumber': number,
+            'item.sizeAndProduct': size_index == -1 ? "" : sizes[size_index].size,
+            'item.businessId': product_info.business_id,
+            'item.price': size_index == -1 ? product_info.new_price : sizes[size_index].price
+        }
         add_shopping_ajax(cart_data);
     }
-    if($(".ok").hasClass("buying")){
-        $.router.replacePage('/client/placeorder.html');
-        $("#info_popup-about").addClass("close-popup");
+    //直接购买
+    if ($(".ok").hasClass("buying")) {
+        $(".buy_href").attr({href: "placeorder.html"});
 
+        $("#info_popup-about").addClass("close-popup");
     }
 }
-
 
 //购物车
     //商家checkbox改变

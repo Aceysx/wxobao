@@ -4,15 +4,10 @@ import com.obao.business.dao.IProductDao;
 import com.obao.business.entity.*;
 
 import com.obao.user.entity.Banner;
-import com.obao.user.entity.Cart;
 import com.obao.user.entity.Collect;
-import com.obao.user.entity.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.transform.Transformers;
-
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by Administrator on 2016/11/8.
@@ -65,6 +60,7 @@ public class ProductDao implements IProductDao{
 
     @Override
     public List<Object> findProtions() {
+
         String sql;
         sql = "SELECT product_id,product_name,product_img,new_price,sales FROM t_product WHERE promotion = 1";
         return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
@@ -77,7 +73,7 @@ public class ProductDao implements IProductDao{
     }
 
     @Override
-    public List<Product> findFootprints(Integer userId) {
+    public List<Product> findFootprints(String userId) {
         return sessionFactory.getCurrentSession().createSQLQuery("SELECT p.* FROM t_footprint f\n" +
                 "LEFT JOIN(SELECT * FROM t_product) p ON  f.product_id = p.product_id\n" +
                 "WHERE f.user_id = ?  ORDER BY  f.add_time DESC  limit 0,10").addEntity(Product.class)
@@ -136,8 +132,8 @@ public class ProductDao implements IProductDao{
     }
 
     @Override
-    public List<Collect> isCollect(Integer id, Integer userId) {
-        return sessionFactory.getCurrentSession().createQuery("from Collect c where c.user.userId=? and c.product.productId=?")
+    public List<Collect> isCollect(Integer id, String userId) {
+        return sessionFactory.getCurrentSession().createQuery("from Collect c where userId=? and productId=?")
                 .setParameter(0,userId)
                 .setParameter(1,id).list();
     }

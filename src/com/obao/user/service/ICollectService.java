@@ -22,7 +22,7 @@ public interface ICollectService {
      * 查找用户所有收藏
      * @return
      */
-    List<Object> findUserAllCollect(Integer userId);
+    List<Object> findUserAllCollect(String userId);
 
     /**
      * 判断用户是否已经收藏过该商品
@@ -30,7 +30,7 @@ public interface ICollectService {
      * @param userId
      * @return
      */
-    Integer isExist(Integer productId, Integer userId);
+    Integer isExist(Integer productId, String userId);
     /**
      * 删除
      */

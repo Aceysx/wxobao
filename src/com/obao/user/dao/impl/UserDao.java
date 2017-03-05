@@ -1,6 +1,7 @@
 package com.obao.user.dao.impl;
 
 import com.obao.user.dao.IUserDao;
+import com.obao.user.entity.Cart;
 import com.obao.user.entity.Footprint;
 import com.obao.user.entity.User;
 import org.hibernate.SessionFactory;
@@ -19,7 +20,7 @@ public class UserDao implements IUserDao{
     }
 
     @Override
-    public User findById(Integer userId) {
+    public User findById(String userId) {
         return (User) sessionFactory.getCurrentSession().get(User.class,userId);
     }
 
@@ -29,7 +30,7 @@ public class UserDao implements IUserDao{
     }
 
     @Override
-    public List<Footprint> isExistFootprint(Integer userId, Integer productId) {
+    public List<Footprint> isExistFootprint(String userId, Integer productId) {
         return sessionFactory.getCurrentSession().createQuery("from Footprint where userId=? and productId = ?")
                 .setParameter(0, userId)
                 .setParameter(1, productId).list();
@@ -46,6 +47,11 @@ public class UserDao implements IUserDao{
                 .setParameter(0, openid)
                 .list();
 
+    }
+
+    @Override
+    public void save(Cart cart) {
+        sessionFactory.getCurrentSession().save(cart);
     }
 
 

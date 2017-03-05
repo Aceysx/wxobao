@@ -27,7 +27,7 @@ public class ProductAction extends ActionSupport {
 	private Integer start; //分页开始
 	private Integer end;
 	private Integer id;
-	private Integer userId;
+	private String userId;
 	private InvokeResult  resultData;
 
 
@@ -190,11 +190,11 @@ public class ProductAction extends ActionSupport {
 		return id;
 	}
 
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

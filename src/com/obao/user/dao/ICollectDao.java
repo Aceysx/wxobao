@@ -22,7 +22,7 @@ public interface ICollectDao {
      * 查找用户所有收藏
      * @return
      */
-    List<Object> findUserAllCollect(Integer userId);
+    List<Object> findUserAllCollect(String userId);
 
     /**
      * 判断用户是否已经收藏过该商品
@@ -30,7 +30,7 @@ public interface ICollectDao {
      * @param userId
      * @return
      */
-    List<Collect> isExist(Integer productId, Integer userId);
+    List<Collect> isExist(Integer productId, String userId);
 
     /**
      * 删除

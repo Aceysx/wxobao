@@ -61,7 +61,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public List<Product> findFootprints(Integer userId) {
+    public List<Product> findFootprints(String userId) {
         return productDao.findFootprints(userId);
     }
 
@@ -96,7 +96,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public Integer isCollect(Integer id, Integer userId) {
+    public Integer isCollect(Integer id, String userId) {
         List<Collect> collect = productDao.isCollect(id, userId);
         if(collect.size() == 0){
             return 0;

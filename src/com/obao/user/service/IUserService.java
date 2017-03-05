@@ -1,6 +1,7 @@
 package com.obao.user.service;
 
 
+import com.obao.user.entity.Cart;
 import com.obao.user.entity.User;
 
 public interface IUserService {
@@ -9,7 +10,7 @@ public interface IUserService {
      * @param userId
      * @return
      */
-    User findById(Integer userId);
+    User findById(String userId);
     /**
      * 保存用户
      * @param user
@@ -21,7 +22,7 @@ public interface IUserService {
      * @param userId
      * @param productId
      */
-    void updateFootprint(Integer userId, Integer productId);
+    void updateFootprint(String userId, Integer productId);
 
     /**
      * 根据用户openid查询用户信息
@@ -36,4 +37,10 @@ public interface IUserService {
      * @return
      */
     boolean openidIsExist(String openid);
+
+    /**
+     * 创建购物车
+     * @param cart
+     */
+    void saveCart(Cart cart);
 }

@@ -25,11 +25,11 @@ public class CollectService implements ICollectService {
     }
 
     @Override
-    public List<Object> findUserAllCollect(Integer userId) {
+    public List<Object> findUserAllCollect(String userId) {
         return collectDao.findUserAllCollect(userId);
     }
     @Override
-    public Integer isExist(Integer productId, Integer userId) {
+    public Integer isExist(Integer productId, String userId) {
         List<Collect> collects = collectDao.isExist(productId, userId);
         if(collects.size() == 0){
             return 0;

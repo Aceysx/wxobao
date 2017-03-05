@@ -15,7 +15,7 @@ public class UserAction extends ActionSupport {
     private IProductService productService;
     private List<Product> productList;
     private User user;
-    private Integer userId;
+    private String userId;
     private String openid;
     private Integer productId;
 
@@ -32,13 +32,14 @@ public class UserAction extends ActionSupport {
      * @return
      */
     public String findUserById(){
-     try {
-         user = userService.findById(user.getUserId());
-         return SUCCESS;
-     }catch (Exception e){
-         e.printStackTrace();
-         return SUCCESS;
-     }
+//     try {
+//         user = userService.findById(user.getUserId());
+//         return SUCCESS;
+//     }catch (Exception e){
+//         e.printStackTrace();
+//         return SUCCESS;
+//     }
+        return SUCCESS;
     }
 
 
@@ -98,11 +99,11 @@ public class UserAction extends ActionSupport {
         return productList;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

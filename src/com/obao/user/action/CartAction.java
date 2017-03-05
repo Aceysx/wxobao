@@ -5,6 +5,7 @@ import com.obao.user.entity.BusinessItem;
 import com.obao.user.entity.ProductItem;
 import com.obao.user.service.ICartService;
 import com.obao.user.service.IUserService;
+import com.obao.util.Constant;
 import com.obao.util.InvokeResult;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
@@ -16,7 +17,7 @@ public class CartAction extends ActionSupport {
     private IUserService userService;
     private IProductService productService;
     private ProductItem item;//产品项
-    private Integer userId;
+    private String userId;
     private InvokeResult resultData;
     /**
      * 查找我的购物车
@@ -36,9 +37,9 @@ public class CartAction extends ActionSupport {
     public String add() {
         boolean isSuccess = cartService.save(item);
         if(isSuccess){
-            resultData = resultData.success("添加成功");
+            resultData = resultData.success(Constant.ADD_CART);
         }else {
-            resultData = resultData.failure("添加出错，请稍后在试");
+            resultData = resultData.failure(Constant.EXCEPTION_TIP);
         }
         return "resultData";
     }
@@ -50,23 +51,15 @@ public class CartAction extends ActionSupport {
     public String delete(){
         try {
             cartService.delete(item);
-            resultData = resultData.success("删除成功");
+            resultData = resultData.success(Constant.DELETE_CART);
         }catch (Exception e){
             e.printStackTrace();
-            resultData = resultData.failure("删除失败，请稍后在试");
+            resultData = resultData.failure(Constant.EXCEPTION_TIP);
         }
         return "resultData";
     }
-    public String findBuyingBill(){
-        try{
-            String productItemIds = ServletActionContext.getRequest().getParameter("productItemIds");
-            String businessItemIds = ServletActionContext.getRequest().getParameter("businessItemIds");
-            List<BusinessItem> businessItems = cartService.findBuyingBill(businessItemIds,productItemIds);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return "buyRS";
-    }
+
+
 
     /**
      * get and set....
@@ -106,11 +99,11 @@ public class CartAction extends ActionSupport {
         this.item = item;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

@@ -18,7 +18,7 @@ import java.util.List;
 public class CollectAction extends ActionSupport {
     private ICollectService collectService;
     private InvokeResult resultData;
-    private Integer userId;
+    private String userId;
     private Integer productId;
 
     /**
@@ -35,13 +35,9 @@ public class CollectAction extends ActionSupport {
                 return "resultData";
             } else {
                 Collect collect = new Collect();
-                User user = new User();
-                user.setUserId(userId);
-                Product product = new Product();
-                product.setProductId(productId);
 
-                collect.setUser(user);
-                collect.setProduct(product);
+                collect.setUserId(userId);
+                collect.setProductId(productId);
                 collect.setAddDate(new Date());
                 collectService.save(collect);
                 resultData = resultData.success(Constant.ADD_COLLECT);
@@ -80,11 +76,11 @@ public class CollectAction extends ActionSupport {
         this.resultData = resultData;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

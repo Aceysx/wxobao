@@ -16,7 +16,7 @@
 		<property name="productId" type="integer">
 			<column name="product_id"/>
 		</property>
-		<property name="userId" type="integer">
+		<property name="userId" type="string">
 			<column name="user_id"/>
 		</property>
 		<property name="businessId" type="integer">
@@ -29,7 +29,5 @@
 		<property name="sizeAndProduct" type="string">
 			<column name="size_and_product"/>
 		</property>
-		<!-- 多个产品项对应一个商家项目 -->
-		<!--<many-to-one name="BusinessItem" column="business_item_id" class="BusinessItem" lazy="false" />-->
 	</class>
 </hibernate-mapping>

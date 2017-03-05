@@ -4,16 +4,14 @@
 
 <hibernate-mapping package="com.obao.user.entity">
     <class name="User" table="t_user" >
-        <id name="userId" type="integer">
+        <id name="userId" type="string">
             <column name="user_id" />
-            <generator class="increment" />
+            <generator class="assigned" />
         </id>
     <property name="nickname" type="string" />
     <property name="openid" type="string" />
     <property name="sex" type="integer" />
     <property name="province" type="string" />
     <property name="headimgurl" type="string" />
-        <!--一个用户对应一个购物车-->
-        <one-to-one name="cart" class="Cart" cascade="all" lazy="false"/>
     </class>
 </hibernate-mapping>

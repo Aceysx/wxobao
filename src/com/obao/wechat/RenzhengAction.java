@@ -1,11 +1,13 @@
 package com.obao.wechat;
 
+import com.obao.user.entity.Cart;
 import com.obao.user.entity.User;
 import com.obao.user.service.IUserService;
 import com.opensymphony.xwork2.ActionSupport;
 import net.sf.json.JSONObject;
 import org.apache.struts2.ServletActionContext;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * Created by Acey on 2017/1/8.
@@ -58,7 +60,7 @@ public class RenzhengAction extends ActionSupport {
             JSONObject jsonObject = JSONObject.fromObject(json);
             String access_token = jsonObject.getString("access_token");
             openid = jsonObject.getString("openid");
-
+            System.out.println(openid);
             //判断该用户的openid是否存在，如果不存保存该用户信息
             if(!userService.openidIsExist(openid)){
                 //获取用户信息
@@ -74,13 +76,20 @@ public class RenzhengAction extends ActionSupport {
                 userInfo.setSex(Integer.parseInt(userInfoJO.getString("sex")));
                 userInfo.setProvince(userInfoJO.getString("province"));
                 userInfo.setHeadimgurl(userInfoJO.getString("headimgurl"));
+
+                userInfo.setUserId(UUID.randomUUID().toString().replace("-",""));
+
+                Cart cart = new Cart();
+                cart.setCartId(userInfo.getUserId());
                 //保存用户信息
                 userService.saveOrUpdate(userInfo);
+                userService.saveCart(cart);
+                user = userInfo;
+            }else{
+                //再查询该用户信息
+                user = userService.findByOpenid(openid);
             }
-            //再查询该用户信息
-            user = userService.findByOpenid(openid);
-
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return "index";

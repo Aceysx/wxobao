@@ -11,9 +11,12 @@
     <property name="addDate" type="date" >
         <column name="add_date"/>
     </property>
-        <!--多个收藏对应一个用户-->
-        <many-to-one name="user" column="user_id" class="User" lazy="false"/>
-        <!--多个收藏对应同一商品-->
-        <many-to-one name="product" column="product_id" class="com.obao.business.entity.Product" lazy="false"/>
+        <property name="userId" type="string" >
+            <column name="user_id"/>
+        </property>
+        <property name="productId" type="integer" >
+            <column name="product_id"/>
+        </property>
+
     </class>
 </hibernate-mapping>

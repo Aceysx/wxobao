@@ -61,7 +61,7 @@ public interface IProductService {
      * @param userId 用户id
      * @return
      */
-    List<Product> findFootprints(Integer userId);
+    List<Product> findFootprints(String userId);
 
     /**
      * banner图查询
@@ -109,5 +109,5 @@ public interface IProductService {
      * @param userId 用户id
      * @return
      */
-    Integer isCollect(Integer id, Integer userId);
+    Integer isCollect(Integer id, String userId);
 }

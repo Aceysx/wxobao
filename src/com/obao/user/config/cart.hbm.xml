@@ -4,15 +4,10 @@
 
 <hibernate-mapping package="com.obao.user.entity">
     <class name="Cart" table="t_cart" >
-        <id name="cartId" type="integer">
+        <id name="cartId" type="string">
             <column name="cart_id" />
-            <generator class="foreign" >
-                <param name="property" >user</param>
-            </generator>
+            <generator class="assigned" />
         </id>
-        <!-- 一个购物车对应一个用户 -->
-        <one-to-one name="user" class="User"></one-to-one>
-       <!-- <many-to-one name="user" class="User" column="user_id" cascade="save-update"/>-->
         <!--购物车下所有商家项-->
        <set name="businessItems"  cascade="save-update" lazy="false" order-by="businessItemId">
        		<key column="cart_id"></key>

@@ -1,6 +1,5 @@
 package com.obao.user.entity;
 
-import com.obao.business.entity.Product;
 
 import java.util.Date;
 
@@ -10,8 +9,8 @@ import java.util.Date;
  */
 public class Collect{
     private Integer id;//收藏ID
-    private User user;//对应的用户
-    private Product product;//收藏的商品
+    private String userId;//对应的用户id
+    private Integer productId;//收藏的商品Id
     private Date addDate;//收藏时间
 
     public Integer getId() {
@@ -22,20 +21,20 @@ public class Collect{
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public Product getProduct() {
-        return product;
+    public Integer getProductId() {
+        return productId;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setProductId(Integer productId) {
+        this.productId = productId;
     }
 
     public Date getAddDate() {
@@ -46,13 +45,5 @@ public class Collect{
         this.addDate = addDate;
     }
 
-    @Override
-    public String toString() {
-        return "Collect{" +
-                "id=" + id +
-                ", user=" + user +
-                ", product=" + product +
-                ", addDate=" + addDate +
-                '}';
-    }
+
 }

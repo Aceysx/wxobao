@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class Footprint {
     private Integer footId;
-    private Integer userId;
+    private String userId;
     private Date addTime;
     private Integer productId;
 
@@ -26,9 +26,7 @@ public class Footprint {
         this.footId = footId;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+
 
     public void setAddTime(Date addTime) {
         this.addTime = addTime;
@@ -39,8 +37,12 @@ public class Footprint {
         return footId;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public Date getAddTime() {

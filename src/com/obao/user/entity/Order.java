@@ -16,24 +16,15 @@ public class Order {
     private Date dealTime;//处理时间
     private String finishTime;//取餐时间
     private Integer state;//状态 0 下单未处理 1下单已处理 2 取餐成功
-    private String flavor;//口味
-    private String size;//大小
-    private String remark;
+    private String classifys; // 商品类别
+    private String remark;//用户留言
 
-    public String getFlavor() {
-        return flavor;
+    public String getClassifys() {
+        return classifys;
     }
 
-    public void setFlavor(String flavor) {
-        this.flavor = flavor;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
+    public void setClassifys(String classifys) {
+        this.classifys = classifys;
     }
 
     public Integer getOrderId() {

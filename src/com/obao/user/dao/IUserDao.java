@@ -1,6 +1,7 @@
 package com.obao.user.dao;
 
 
+import com.obao.user.entity.Cart;
 import com.obao.user.entity.Footprint;
 import com.obao.user.entity.User;
 
@@ -12,7 +13,7 @@ public interface IUserDao {
      * @param userId
      * @return
      */
-	User findById(Integer userId);
+	User findById(String userId);
 
     /**
      * 保存用户
@@ -26,7 +27,7 @@ public interface IUserDao {
      * @param productId
      * @return
      */
-    List<Footprint> isExistFootprint(Integer userId, Integer productId);
+    List<Footprint> isExistFootprint(String userId, Integer productId);
 
     /**
      * 更新或保存足迹
@@ -42,4 +43,9 @@ public interface IUserDao {
     List<User> findByOpenid(String openid);
 
 
+    /**
+     * 创建用户购物车
+     * @param cart
+     */
+    void save(Cart cart);
 }

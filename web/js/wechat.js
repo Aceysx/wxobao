@@ -7,7 +7,7 @@
 function saveOpenid() {
     //从地址中截取openid
     var data = location.href.split("?");
-    if(data.length != 4){
+    if(data.length != 5){
         turn_to_auto();
     }
 
@@ -15,9 +15,14 @@ function saveOpenid() {
     var openid = data[1];
     var nickname = data[2];
     var headimgurl = data[3];
+    var userId = data[4];
     setCookie("openid",openid,365);
     setCookie("nickname",nickname,365);
     setCookie("headimgurl",headimgurl,365);
+    setCookie("userId",userId,365);
+
+    //设置全局 uid
+    uid = userId;
 }
 //获取用户信息
 function getUserInfo() {
@@ -28,9 +33,16 @@ function getUserInfo() {
     var userInfo = {
         "openid":getCookie("openid"),
         "nickname":getCookie("nickname"),
-        "headimgurl":getCookie("headimgurl")
+        "headimgurl":getCookie("headimgurl"),
+        "userId":getCookie("userId")
     }
     return userInfo;
+}
+//获取用户id
+function getUserId() {
+    var userInfo = getUserInfo();
+    return userInfo.userId;
+
 }
 //跳转授权
 function turn_to_auto() {

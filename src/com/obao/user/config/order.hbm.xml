@@ -38,11 +38,6 @@
 		<property name="remark" type="string">
 			<column name="remark" />
 		</property>
-		<property name="flavor" type="string">
-			<column name="flavor" />
-		</property>
-		<property name="size" type="string">
-			<column name="size" />
-		</property>
+		<property name="classifys" type="string" />
 	</class>
 </hibernate-mapping>

@@ -31,13 +31,9 @@ public class OrderAcion extends ActionSupport {
      * 结算
      */
     public  String statement(){
-        try {
-            JSONArray json = JSONArray.fromObject(orderString);
-            orders = (List<Order>)JSONArray.toCollection(json, Order.class);
-            orderService.saveOrder(orders);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        JSONArray json = JSONArray.fromObject(orderString);
+        orders = (List<Order>)JSONArray.toCollection(json, Order.class);
+        orderService.saveOrder(orders);
         return "orders";
     }
 

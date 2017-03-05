@@ -13,7 +13,9 @@ $(function () {
     // saveOpenid();
 });
 
-//商品详情
+/**
+ * 商品详情
+ */
     //collection图标状态改变
 function change_collect(t){
     if($(t).hasClass("hasCollect")){
@@ -86,13 +88,15 @@ function isBuy() {
     }
     //直接购买
     if ($(".ok").hasClass("buying")) {
-        $(".buy_href").attr({href: "placeorder.html"});
+        $(".buy_href").attr({href: "placeorder.html?"+ new Date().getTime()});
 
         $("#info_popup-about").addClass("close-popup");
     }
 }
 
-//购物车
+/**
+ * 购物车
+ */
     //商家checkbox改变
 function business_select(t) {
     if($(t).find(".business_select").is(":checked")){
@@ -169,13 +173,64 @@ function delete_product(t) {
     }
     //计算总价
     show_all_price();
-    // var curr_price = $(".total_price").text();
-    // curr_price -= $(t).find(".product_price").text() * $(t).find(".product_number").text()
-    // $(".total_price").text(curr_price);
 }
 
+/**
+ * 下单页面填充
+ */
+    // -- >商品详情页面跳转下单页面
+function buy_to_order() {
+
+    var productId = product_info.product_id;
+    var businessId = product_info.business_id;
+    var pimg = host_img + "product/"+product_info.product_img;
+    var productName = product_info.product_name;
+    var flavor = flavor_index == -1 ? "" : flavors[flavor_index].name;
+    var size = size_index == -1 ? "" : sizes[size_index].size;
+    var classifys = flavor +" "+ size ;
+    var price = size_index == -1 ? product_info.new_price : sizes[size_index].price;
+    var buyNumber = number;
+
+    var _html = "";
+    _html += "<div class='placeorder_product'> <div class='list-block media-list'><ul><li ><a href='#' class='item-link item-content'>";
+    _html += "<div class='item-media'><img src='"+pimg+"' width='68rem' height='68rem'></div><div class='item-inner'>";
+    _html += "<div class='item-title produt_name_style'><b>"+productName+"</b></div>";
+    _html += "<div class='item-title placeorder_kinds'>"+classifys+"</div>";
+    _html += "<div class='item-title number'>数量:<span class='place_order_number'>"+buyNumber+"</span></div><div class='item-title-row'>";
+    _html += "<div class='item-title price_style placeorder_price'><b>￥<span class='place_order_price'>"+price+"</span>元</b></div>";
+    _html += "</div></div></a></li></ul></div><div class='list-block choose_time'><ul><li>";
+    _html += "<div class='item-content'><div class='item-inner'><div class='item-title label'>取餐时间：</div><div class='item-input'>";
+    _html += "<input type='hidden' class='businessId'  value='"+businessId+"'/>";
+    _html += "<input type='hidden' class='productId'  value='"+productId+"'/>";
+    _html += "<input type='datetime-local' class='order_remark ' style='color: #21a1a1;font-size: .6rem;font-weight: bolder'  value=''/>";
+    _html += "</div></div></div>";
+    _html += "<div class='item-content'><div class='item-inner'><div class='item-title label'>买家留言：</div>";
+    _html += "<div class='item-input'><input type='text' class='order_remark' style='font-size: .6rem' placeholder='给店家留言'/>";
+    _html += "</div></div></div></li></ul></div></div>";
+
+    $("#order_content").append(_html);
+    place_order_allprice();
+}
+    // -- >购物车页面跳转下单页面
+function shopping_to_order() {
+}
+    //计算价格
+function place_order_allprice() {
+    var place_order_allprice = 0;
+    var product =  $(".placeorder_product");
+    for(var i = 0;i < product.length; ++i){
+        place_order_allprice += $(product[i]).find(".place_order_price").text() * $(product[i]).find(".place_order_number").text();
+    }
+    $(".placeorder_total_price").text(place_order_allprice);
+}
+
+
+
+
+
+
 //全局js
-    //notifytion
+//notifytion
 function show_notification(title,text,img_url) {
     $.notification({
         title: title,
@@ -189,14 +244,4 @@ function show_notification(title,text,img_url) {
             $.alert("Click" + data);
         }
     });
-}
-
-//计算价格 下单页面
-function place_order_allprice() {
-    var place_order_allprice = 0;
-    var product =  $(".placeorder_product");
-    for(var i = 0;i < product.length; ++i){
-        place_order_allprice += $(product[i]).find(".place_order_price").text() * $(product[i]).find(".place_order_number").text();
-    }
-    $(".placeorder_total_price").text(place_order_allprice);
 }

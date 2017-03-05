@@ -62,7 +62,7 @@ public interface IProductDao {
      * @param userId
      * @return
      */
-    List<Product> findFootprints(Integer userId);
+    List<Product> findFootprints(String userId);
 
     /**
      * banner图查询
@@ -117,5 +117,5 @@ public interface IProductDao {
      * @param userId
      * @return
      */
-    List<Collect> isCollect(Integer id, Integer userId);
+    List<Collect> isCollect(Integer id, String userId);
 }

@@ -137,4 +137,10 @@ public class ProductDao implements IProductDao{
                 .setParameter(0,userId)
                 .setParameter(1,id).list();
     }
+
+    @Override
+    public List<String> findImgsByProductId(Integer id) {
+        String sql = "select img from t_product_img where product_id ="+id;
+        return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+    }
 }

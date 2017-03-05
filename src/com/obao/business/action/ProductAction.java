@@ -36,16 +36,24 @@ public class ProductAction extends ActionSupport {
 	 */
 	public String detail(){
 		try {
+			//商品基本信息
 			Object productDetail = productService.findDetailById(id);
+			//商品焦点图图片
+			List<String> imgs = productService.findImgsByProductId(id);
+			//商品口味
 			List<Object> flavors = productService.findFlavor(id);
+			//商品尺寸
 			List<Object> sizes = productService.findSize(id);
+			//用户是否收藏
 			Integer collect = productService.isCollect(id, userId);
+
 			//package data
 			Map<String, Object> data = new HashMap<String, Object>();
 			data.put("isCollect", collect);
 			data.put("sizes", sizes);
 			data.put("flavors", flavors);
 			data.put("detail", productDetail);
+			data.put("imgs", imgs);
 			resultData = resultData.success(data);
 			return "resultData";
 		} catch (Exception e) {

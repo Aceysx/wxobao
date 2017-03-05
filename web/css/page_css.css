@@ -114,3 +114,15 @@ img{border-radius: 0.15rem;}
 #personInfo_img{width: 2rem;height: 2rem;border-radius: 1rem;margin-right: 1rem}
 #userInfo_name{text-align: right;}
 .personInfo_test_style{margin-right: 1rem}
+
+/*message*/
+#message_about .content{margin-bottom: 0}
+.message_img{width: 1.5rem;height: 1.5rem}
+.message_info{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.message_list{margin-top: -1px}
+
+/*about*/
+#page_about .content{margin-bottom: 0}
+#logo{width: 3rem;height: 3rem;margin: 2.5rem auto}
+#about_info{text-align: center;margin-top: -3rem}
+#about_bottom_info{text-align: center;font-size: .6rem;margin-top: 2rem}

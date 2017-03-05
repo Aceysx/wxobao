@@ -110,4 +110,11 @@ public interface IProductService {
      * @return
      */
     Integer isCollect(Integer id, String userId);
+
+    /**
+     * 查找商品焦点图图片
+     * @param id 商品id
+     * @return
+     */
+    List<String> findImgsByProductId(Integer id);
 }

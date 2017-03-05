@@ -31,7 +31,6 @@ public class ProductService implements IProductService {
 	@Override
 	public void save(Product product) {
 		productDao.save(product);
-		
 	}
 
 	@Override
@@ -103,6 +102,11 @@ public class ProductService implements IProductService {
         }else{
             return 1;
         }
+    }
+
+    @Override
+    public List<String> findImgsByProductId(Integer id) {
+        return productDao.findImgsByProductId(id);
     }
 
 }

@@ -253,11 +253,12 @@ function product_detail_ajax(pid) {
                 sizes = data.sizes;
                 isCollect = data.isCollect;
                 product_info = data.detail;
+                imgs = data.imgs;
 
                 //商品基本信息          picture need to update
-                $("#imgs").attr({src: host_img + "product/" + product_info.product_img});
-                $("#imgs1").attr({src: host_img + "product/" + product_info.product_img});
-                $("#imgs2").attr({src: host_img + "product/" + product_info.product_img});
+                $("#imgs").attr({src: host_img + "product/" + imgs[0]});
+                $("#imgs1").attr({src: host_img + "product/" + imgs[1]});
+                $("#imgs2").attr({src: host_img + "product/" + imgs[2]});
 
                 $("#product_name").text(product_info.product_name);
                 $("#bargain_price").text("促销价：￥" + product_info.new_price);

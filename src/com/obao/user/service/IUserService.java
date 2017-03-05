@@ -11,18 +11,12 @@ public interface IUserService {
      * @return
      */
     User findById(String userId);
+
     /**
      * 保存用户
      * @param user
      */
     void saveOrUpdate(User user);
-
-    /**
-     * 更新用户的足迹
-     * @param userId
-     * @param productId
-     */
-    void updateFootprint(String userId, Integer productId);
 
     /**
      * 根据用户openid查询用户信息

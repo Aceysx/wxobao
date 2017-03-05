@@ -10,7 +10,7 @@ $(function () {
         autoplay:2000,
     })
     //判断用户是否非法进入主页
-    // saveOpenid();
+    saveOpenid();
 });
 
 /**
@@ -224,9 +224,25 @@ function place_order_allprice() {
     $(".placeorder_total_price").text(place_order_allprice);
 }
 
-
-
-
+/**
+ * 个人中心
+ */
+    //个人中心页面
+function person() {
+    var info = getUserInfo();
+    var name = info.userName;
+    var img = info.userImg;
+    $("#person_img").attr({src: img});
+    $("#person_name").text(name);
+}
+    //个人信息页面
+function person_info() {
+    var info = getUserInfo();
+    $("#personInfo_name").text(info.userName);
+    $("#personInfo_img").attr({src:info.userImg});
+    $("#personInfo_sex").text(info.sex);
+    // $("#personInfo_address").text(info.address);
+}
 
 
 //全局js

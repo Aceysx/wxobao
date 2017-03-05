@@ -44,7 +44,5 @@
             <key column="business_id"></key>
             <one-to-many class="Product"/>
         </set>
-        <!--多个商家所对应一个区域-->
-        <!--<many-to-one name="domain" column="domain_id" class="BusinessDomain" lazy="false"/>-->
     </class>
 </hibernate-mapping>

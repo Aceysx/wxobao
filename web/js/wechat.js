@@ -7,19 +7,24 @@
 function saveOpenid() {
     //从地址中截取openid
     var data = location.href.split("?");
-    if(data.length != 5){
+    if(data.length != 6){
         turn_to_auto();
     }
-
     //将获取到的用户信息保存到 Cookie 中
     var openid = data[1];
     var nickname = data[2];
     var headimgurl = data[3];
     var userId = data[4];
+    var sex = data[5];
+    sex = sex == 1 ? "男" : "女";
+    // var province = decodeURI(data[6]);
+
     setCookie("openid",openid,365);
     setCookie("nickname",nickname,365);
     setCookie("headimgurl",headimgurl,365);
     setCookie("userId",userId,365);
+    setCookie("sex",sex,365);
+    // setCookie("address",province,365);
 
     //设置全局 uid
     uid = userId;
@@ -32,9 +37,11 @@ function getUserInfo() {
     }
     var userInfo = {
         "openid":getCookie("openid"),
-        "nickname":getCookie("nickname"),
-        "headimgurl":getCookie("headimgurl"),
-        "userId":getCookie("userId")
+        "userName":getCookie("nickname"),
+        "userImg":getCookie("headimgurl"),
+        "userId":getCookie("userId"),
+        "sex":getCookie("sex"),
+        // "address":getCookie("address")
     }
     return userInfo;
 }
@@ -46,7 +53,7 @@ function getUserId() {
 }
 //跳转授权
 function turn_to_auto() {
-    location.href = "http://obao.tunnel.2bdata.com/";
+    location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx3ef4e6cc97e27e16&redirect_uri="+host+"/chat_auto.htm&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
 }
 
 //cookie设置或获取

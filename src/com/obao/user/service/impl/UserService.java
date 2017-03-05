@@ -2,11 +2,9 @@ package com.obao.user.service.impl;
 
 import com.obao.user.dao.IUserDao;
 import com.obao.user.entity.Cart;
-import com.obao.user.entity.Footprint;
 import com.obao.user.entity.User;
 import com.obao.user.service.IUserService;
 
-import java.util.Date;
 import java.util.List;
 
 
@@ -27,20 +25,7 @@ public class UserService implements IUserService{
         userDao.saveOrUpdate(user);
     }
 
-    @Override
-    public void updateFootprint(String userId, Integer productId) {
-        List<Footprint> footprints = userDao.isExistFootprint(userId,productId);
-        Footprint print = new Footprint();
-        if(footprints.size() == 0 ){
-            print.setAddTime(new Date());
-            print.setUserId(userId);
-            print.setProductId(productId);
-        }else{
-            print = footprints.get(0);
-            print.setAddTime(new Date());
-        }
-        userDao.saveOrUpdateFootprint(print);
-    }
+
 
     @Override
     public User findByOpenid(String openid) {

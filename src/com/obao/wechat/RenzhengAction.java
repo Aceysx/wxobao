@@ -60,7 +60,7 @@ public class RenzhengAction extends ActionSupport {
             JSONObject jsonObject = JSONObject.fromObject(json);
             String access_token = jsonObject.getString("access_token");
             openid = jsonObject.getString("openid");
-            System.out.println(openid);
+
             //判断该用户的openid是否存在，如果不存保存该用户信息
             if(!userService.openidIsExist(openid)){
                 //获取用户信息

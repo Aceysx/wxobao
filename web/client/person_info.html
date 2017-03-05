@@ -1,66 +1,55 @@
 <div class="page no-tabbar" id="page_personInfo">
     <header class="bar bar-nav">
         <a class="icon icon-left pull-left back"></a>
-        <!--<a class="icon icon-refresh pull-right" style="color: white" onclick="get_usreinfo()"></a>-->
         <h1 class="title">个人信息</h1>
     </header>
     <div class="content">
         <div class="card-content">
             <div class="list-block">
-                <ul id="user_info_list1">
+                <ul class="userInfo_list">
                     <li>
                         <a href="#" class="item-link item-content">
                             <div class="item-inner">
-                                <div class="item-title" id="username">头像</div>
+                                <div class="item-title">头像</div>
                             </div>
-                            <div class="item-media"> <img src="../img/1.png" id="user_img"></div>
+                            <div class="item-media "> <img src="../img/1.png" id="personInfo_img"></div>
                         </a>
                     </li>
                 </ul>
-                <ul id="user_info_list2">
+                <ul class="userInfo_list">
                     <li>
                         <a href="#" class="item-link item-content">
                             <div class="item-inner">
-                                <div class="item-title" id="sex">性别</div>
+                                <div class="item-title" >呢称</div>
                             </div>
-                            <div class="item-media user_sex">男</div>
+                            <div class="item-media personInfo_test_style" id="personInfo_name">不要和我名字一样</div>
                         </a>
                     </li>
                 </ul>
-                <ul id="user_info_list3">
+                <ul class="userInfo_list">
                     <li>
                         <a href="#" class="item-link item-content">
                             <div class="item-inner">
-                                <div class="item-title" id="userId">ID</div>
+                                <div class="item-title">性别</div>
                             </div>
-                            <div class="item-media user_id">456728229</div>
+                            <div class="item-media personInfo_test_style" id="personInfo_sex"></div>
                         </a>
                     </li>
                 </ul>
-                <ul id="user_info_list4">
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-inner">
-                                <div class="item-title" id="nickname">呢称</div>
-                            </div>
-                            <div class="item-media user_nickname">不要和我名字一样</div>
-                        </a>
-                    </li>
-                </ul>
-                <ul id="user_info_list5">
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-inner">
-                                <div class="item-title" id="address">地址</div>
-                            </div>
-                            <div class="item-media user_address">陕西省西安市西安欧亚学院</div>
-                        </a>
-                    </li>
-                </ul>
+                <!--<ul class="userInfo_list">-->
+                    <!--<li>-->
+                        <!--<a href="#" class="item-link item-content">-->
+                            <!--<div class="item-inner">-->
+                                <!--<div class="item-title">地址</div>-->
+                            <!--</div>-->
+                            <!--<div class="item-media personInfo_test_style" id="personInfo_address"></div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
             </div>
         </div>
         <div class="content-block">
-            <p><a href="#" class="button button-fill button-round"  style="background-color: #20a1a1;" onclick="get_usreinfo()">点此获取用户用户信息</a></p>
+            <p><a href="#" class="button button-fill button-round"  style="background-color: #20a1a1;" onclick="get_usreinfo()">从微信中刷新用户用户信息</a></p>
         </div>
     </div>
 </div>

@@ -43,26 +43,7 @@ public class UserAction extends ActionSupport {
     }
 
 
-    /**
-     * 查看用户足迹
-     */
-    public String footprints(){
-        productList = productService.findFootprints(userId);
-        return "productList";
-    }
 
-    /**
-     * 更新足迹
-     */
-    public  String updateFootprint(){
-        try {
-            userService.updateFootprint(userId,productId);
-            return "backJson";
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "backJson";
-        }
-    }
     /**
      * get and set......
      */

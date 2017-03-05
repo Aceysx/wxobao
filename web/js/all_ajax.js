@@ -2,7 +2,7 @@
 // var host = "http://localhost:8080/";
 var host = "http://obao.tunnel.2bdata.com/";
 var host_img = host+"/upload/";
-var uid = 'b6078046a4424c0992dfbe9229dc2850'; // 测试用
+var uid = ''; // 测试用b6078046a4424c0992dfbe9229dc2850
 //商品详情
 var flavors;//商品口味
 var sizes;//商品尺寸

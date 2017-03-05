@@ -1,14 +1,12 @@
 package com.obao.user.action;
 
 import com.obao.business.service.IProductService;
-import com.obao.user.entity.BusinessItem;
 import com.obao.user.entity.ProductItem;
 import com.obao.user.service.ICartService;
 import com.obao.user.service.IUserService;
 import com.obao.util.Constant;
 import com.obao.util.InvokeResult;
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.ServletActionContext;
 
 import java.util.*;
 

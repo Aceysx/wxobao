@@ -111,7 +111,6 @@ img{border-radius: 0.15rem;}
 #person_info img{width: 5rem;height: 5rem;border-radius: 2.5rem;margin: 0 auto}
 
 /*personInfo page*/
-#user_img{width: 2rem;height: 2rem;border-radius: 1rem;margin-right: 1rem}
-#username{text-align: right;}
-#user_info_list2,#user_info_list3,#user_info_list4,#user_info_list5{margin-top: -1px}
-.user_nickname,.user_address,.user_id,.user_sex{margin-right: 1rem}
+#personInfo_img{width: 2rem;height: 2rem;border-radius: 1rem;margin-right: 1rem}
+#userInfo_name{text-align: right;}
+.personInfo_test_style{margin-right: 1rem}

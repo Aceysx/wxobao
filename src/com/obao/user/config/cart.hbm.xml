@@ -8,10 +8,5 @@
             <column name="cart_id" />
             <generator class="assigned" />
         </id>
-        <!--购物车下所有商家项-->
-       <set name="businessItems"  cascade="save-update" lazy="false" order-by="businessItemId">
-       		<key column="cart_id"></key>
-       		<one-to-many class="BusinessItem" />
-       </set>
     </class>
 </hibernate-mapping>

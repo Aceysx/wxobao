@@ -65,7 +65,11 @@ $(document).on("pageInit",function (e,pageId,$page) {
  * **/
     //个人中心页面跳转
     if(pageId == "page_person"){
-
+        person();
+    }
+    //个人信息页面
+    if(pageId == "page_personInfo"){
+        person_info();
     }
     //orders page
     if(pageId == "page_orders"){

@@ -15,11 +15,16 @@ $(document).on('refresh', '.pull-to-refresh-content',function(e) {
 $(document).on("pageInit",function (e,pageId,$page) {
     //获取 url 中的参数
     ids = getIds(location.href);
+    //每个页面都判断用户是否非法登录（非微信客户端进入页面）
+    uid = getUserId();
+
+
 /**
  * 主页
  * **/
     //主页跳转
     if( pageId == "page_index"){
+
         banners_ajax();
         range_ajax();
         promotion_products_ajax();

@@ -21,9 +21,9 @@ function banners_ajax() {
         success:function (data) {
             if(data.result == true){
                 data = data.data;
-                for(var i = 0; i < data.length; ++i) {
-                  $("#banner_id_"+i).find("img").attr({src:host_img+"/banner/"+data[i].url});
-                  $("#banner_id_"+i).find("a").attr({href:"product_info.html?"+data[i].productId+"?"+new Date().getTime()});
+                for(var i = 1; i < data.length+1; ++i) {
+                  $("#banner_id_"+i).find("img").attr({src:host_img+"/banner/"+data[i-1].url});
+                  $("#banner_id_"+i).find("a").attr({href:"product_info.html?"+data[i-1].productId+"?"+new Date().getTime()});
                 }
             }
         }
@@ -254,11 +254,10 @@ function product_detail_ajax(pid) {
                 isCollect = data.isCollect;
                 product_info = data.detail;
                 imgs = data.imgs;
-
                 //商品基本信息          picture need to update
-                $("#imgs").attr({src: host_img + "product/" + imgs[0]});
-                $("#imgs1").attr({src: host_img + "product/" + imgs[1]});
-                $("#imgs2").attr({src: host_img + "product/" + imgs[2]});
+                $("#imgs").attr({src: host_img + "product/" + imgs[0].img});
+                $("#imgs1").attr({src: host_img + "product/" + imgs[1].img});
+                $("#imgs2").attr({src: host_img + "product/" + imgs[2].img});
 
                 $("#product_name").text(product_info.product_name);
                 $("#bargain_price").text("促销价：￥" + product_info.new_price);

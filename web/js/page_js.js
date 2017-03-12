@@ -5,12 +5,11 @@ $(function () {
         paginationClickable:true,
         slidesPerView:'auto',
         centeredSlides:true,
-        effect:"coverflow",
+        effect:"fade",
         speed: 500,
-        autoplay:2000,
-    })
-    //判断用户是否非法进入主页
-    saveOpenid();
+        autoplay:2000    })
+    // 设置全局用户id
+    // uid = getUserId();
 });
 
 /**
@@ -229,6 +228,7 @@ function place_order_allprice() {
  */
     //个人中心页面
 function person() {
+
     var info = getUserInfo();
     var name = info.userName;
     var img = info.userImg;

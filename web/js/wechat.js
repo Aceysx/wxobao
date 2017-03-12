@@ -1,24 +1,7 @@
-/**
- *      当用户每次进入 client/index.html 页面时，判断 url 中的参数是否合法（避免用户
- *      跳过认证直接进入）
- * **/
 
-//从 url 中判断参数是否合法  不合法直接跳转认证页面
-function saveOpenid() {
-    //从地址中截取openid
-    var data = location.href.split("?");
-    if(data.length != 6){
-        turn_to_auto();
-    }
-    //将获取到的用户信息保存到 Cookie 中
-    var openid = data[1];
-    var nickname = data[2];
-    var headimgurl = data[3];
-    var userId = data[4];
-    var sex = data[5];
+//设置用户信息
+function setUserInfo(openid,nickname,headimgurl,userId,sex) {
     sex = sex == 1 ? "男" : "女";
-    // var province = decodeURI(data[6]);
-
     setCookie("openid",openid,365);
     setCookie("nickname",nickname,365);
     setCookie("headimgurl",headimgurl,365);
@@ -26,12 +9,11 @@ function saveOpenid() {
     setCookie("sex",sex,365);
     // setCookie("address",province,365);
 
-    //设置全局 uid
-    uid = userId;
 }
 //获取用户信息
 function getUserInfo() {
-    if(getCookie("openid") == null || getCookie("openid") ==""){
+    //如果本地 cookie 中没有用户信息，跳转授权
+    if(getCookie("openid") == null || getCookie("openid") == "undefined" || getCookie("openid") == ""){
         turn_to_auto();
         return;
     }

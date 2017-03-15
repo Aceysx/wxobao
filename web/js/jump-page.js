@@ -16,7 +16,7 @@ $(document).on("pageInit",function (e,pageId,$page) {
     //获取 url 中的参数
     ids = getIds(location.href);
     //每个页面都判断用户是否非法登录（非微信客户端进入页面）
-    uid = getUserId();
+    // uid = getUserId();
 
 
 /**

@@ -24,7 +24,6 @@ $(document).on("pageInit",function (e,pageId,$page) {
  * **/
     //主页跳转
     if( pageId == "page_index"){
-
         banners_ajax();
         range_ajax();
         promotion_products_ajax();

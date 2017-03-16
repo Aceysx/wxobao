@@ -8,8 +8,6 @@ $(function () {
         effect:"fade",
         speed: 500,
         autoplay:2000    })
-    // 设置全局用户id
-    // uid = getUserId();
 });
 
 /**
@@ -201,7 +199,7 @@ function buy_to_order() {
     _html += "<div class='item-content'><div class='item-inner'><div class='item-title label'>取餐时间：</div><div class='item-input'>";
     _html += "<input type='hidden' class='businessId'  value='"+businessId+"'/>";
     _html += "<input type='hidden' class='productId'  value='"+productId+"'/>";
-    _html += "<input type='datetime' class='order_remark ' style='color: #21a1a1;font-size: .6rem;font-weight: bolder'  value=''/>";
+    _html += "<input type='time' class='order_remark ' style='color: #21a1a1;font-size: .6rem;font-weight: bolder;padding-top: .7rem'  value=''/>";
     _html += "</div></div></div>";
     _html += "<div class='item-content'><div class='item-inner'><div class='item-title label'>买家留言：</div>";
     _html += "<div class='item-input'><input type='text' class='order_remark' style='font-size: .6rem' placeholder='给店家留言'/>";

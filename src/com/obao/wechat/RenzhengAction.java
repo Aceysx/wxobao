@@ -62,7 +62,8 @@ public class RenzhengAction extends ActionSupport {
             openid = jsonObject.getString("openid");
 
             //判断该用户的openid是否存在，如果不存保存该用户信息
-            if(!userService.openidIsExist(openid)){
+            user = userService.findByOpenid(openid);
+            if(user == null){
                 //获取用户信息
                 get_userinfo = get_userinfo.replace("ACCESS_TOKEN", access_token);
                 get_userinfo = get_userinfo.replace("OPENID", openid);
@@ -85,9 +86,6 @@ public class RenzhengAction extends ActionSupport {
                 userService.saveOrUpdate(userInfo);
                 userService.saveCart(cart);
                 user = userInfo;
-            }else{
-                //再查询该用户信息
-                user = userService.findByOpenid(openid);
             }
         } catch (Exception e) {
             e.printStackTrace();

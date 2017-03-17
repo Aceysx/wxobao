@@ -393,7 +393,7 @@ function shopping_ajax() {
     $.ajax({
         url:host+"cart_findMyCart.htm",
         type:"post",
-        data:{userId:uid},
+            data:{userId:uid},
         success:function (data) {
             if(data.result){
                 data = data.data;
@@ -416,9 +416,9 @@ function shopping_ajax() {
                         _html += "<label class='label-checkbox item-content shop_title business' onclick='business_select(this)'>";
                         _html += "<input type='checkbox' name='business' class='business_select'>";
                         _html += "<div class='item-media store_name_checkbox'>";
-                        _html += "<i class='icon icon-form-checkbox' style='margin-left: -10px;margin-top: -2px;width: 15px;height: 15px'></i>";
+                        _html += "<i class='icon icon-form-checkbox' style='margin-left: -10px;margin-top: -2px;width: 1.1rem;height: 1.1rem'></i>";
                         _html += "<img src='"+business_img+"' alt='loading'></div><div class='item-inner store_name' style='border: 0;'>";
-                        _html += "<div class='item-text'>"+business_name+"</div></div></label>";
+                        _html += "<a href='business_info.html?"+business_id+"'><div class='item-text'>"+business_name+"</div></a></div></label>";
                     }else{
                         //当前商品所属的商家和上一个商品的商家id不一致时，那么重新创建一个商家项.并重置当前商家id
                         if(business_id != data[i].business_id){
@@ -430,9 +430,9 @@ function shopping_ajax() {
                             _html += "<label class='label-checkbox item-content shop_title business' onclick='business_select(this)'>";
                             _html += "<input type='checkbox' name='business' class='business_select'>";
                             _html += "<div class='item-media store_name_checkbox'>";
-                            _html += "<i class='icon icon-form-checkbox' style='margin-left: -10px;margin-top: -2px;width: 15px;height: 15px'></i>";
+                            _html += "<i class='icon icon-form-checkbox' style='margin-left: -10px;margin-top: -2px;width: 1.1rem;height: 1.1rem'></i>";
                             _html += "<img src='"+business_img+"' alt='loading'></div><div class='item-inner store_name' style='border: 0;'>";
-                            _html += "<div class='item-text'>"+business_name+"</div></div></label>";
+                            _html += "<a href='business_info.html?"+business_id+"'><div class='item-text'>"+business_name+"</div></a></div></label>";
                         }
                     }
                     //添加商品项
@@ -440,13 +440,13 @@ function shopping_ajax() {
                     _html += "<input type='hidden' class='item_id' value='"+product_item_id+"'><div class='swipeout-content'>";
                     _html += "<input type='hidden' class='product_id' value='"+product_id+"'>";
                     _html += "<label class='label-checkbox item-content'><input type='checkbox' name='product' class='product_select'>";
-                    _html += "<div class='item-media'>";
-                    _html += "<i class='icon icon-form-checkbox' style='margin-left: -10px;width: 15px;height: 15px'></i>";
-                    _html += "<img src='"+product_img+"' alt='loading'></div><div class='item-inner'>";
+                    _html += "<div class='item-media' style='margin-right: 10px'>";
+                    _html += "<i class='icon icon-form-checkbox' style='margin-left: -10px;width: 1rem;height: 1rem'></i>";
+                    _html += "<img src='"+product_img+"' alt='loading'></div><a href='product_info.html?"+product_id+"' ><div class='item-inner'>";
                     _html += "<div class='item-text'><b>"+product_name+"</b></div><div class='item-text'>";
                     _html += "<span class='kind'>"+flavor+" "+size+"</span>";
                     _html += "<span class='price'>￥<span class='product_price'>"+product_price+"</span>元</span>";
-                    _html += "<span class='number'>x<span class='product_number'>"+product_number+"</span></span></div></div></label></div>";
+                    _html += "<span class='number'>x<span class='product_number'>"+product_number+"</span></span></div></a></div></label></div>";
                     _html += "<div class='swipeout-actions-right'>";
                     _html += "<a class='bg-danger swipeout-delete ' href='#' data-confirm='确定要删除该商品吗？' data-confirm-title='提示'>删除</a>";
                     _html += "<a class='swipeout-close' href='#'>取消</a></div></li>";

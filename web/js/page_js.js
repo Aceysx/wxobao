@@ -168,6 +168,7 @@ function delete_product(t) {
     if(products.length == 0){
         $(t).parents(".business_product").remove();
     }
+    one_product_all();
     //计算总价
     show_all_price();
 }

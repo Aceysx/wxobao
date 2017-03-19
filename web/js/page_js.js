@@ -168,7 +168,28 @@ function delete_product(t) {
     if(products.length == 0){
         $(t).parents(".business_product").remove();
     }
-    one_product_all();
+
+    // select all
+    var products_all = $(".product");//获取所有商品
+    var select_products_all = $(".product").find("input[name='product']:checked");//获取选中的所有商品
+    if(products_all.length - 1 == select_products_all.length){
+        $(".all_select").prop("checked", true);
+    }else{
+        $(".all_select").prop("checked", false);
+    }
+
+    //business select
+    var business_ = $(t).siblings(".business")[0];//获取商品所属的商家
+    var products_ = $(business_).siblings(".product");//获取该商家下的所有商品
+    var select_products_ = $(business_).siblings(".product").find("input[name='product']:checked");//获取该商家下选中的所有商品
+    if(products_.length-1 == select_products_.length){ //
+        //check when products.length == select_products.length
+        $(business_).find(".business_select").prop("checked",true);
+    }else{
+        //or remove
+        $(business_).find(".business_select").removeAttr("checked");
+    }
+
     //计算总价
     show_all_price();
 }

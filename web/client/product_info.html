@@ -79,7 +79,7 @@
             <div style="width: 28%" onclick="buy(this)" class="buy open-popup open-about"  data-popup=".popup-about">立即购买</div>
         </footer>
         <!--选择商品规格弹出框 每次路由跳转不同页面都会创建一个popup导致出现多个相同id，所以全部改成class防止多个id失效-->
-        <div class="popup popup-about" id="info_popup-about">
+        <div class="popup popup-about modal-overlay-visible" id="info_popup-about">
             <div class="content-block" style="margin: 0; " >
                 <div class="list-block media-list" style="margin: 0">
                     <ul >
@@ -128,6 +128,14 @@
                 </div>
             </div>
         </div>
+        <script>
+            setTimeout(function () {
+                window.addEventListener("popstate",function (e) {
+                    $(".popup").addClass("poppup-overlay").hide();
+//                    location.replace(document.referrer)
+                },false)
+            },300)
+        </script>
     </div>
 
 </div>

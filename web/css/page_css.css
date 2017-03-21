@@ -43,6 +43,7 @@ img{border-radius: 0.15rem;}
 #page_shopping .item-text{height: auto;color: black}
 #page_shopping .store_name_checkbox img{width: 15px;height: 15px;margin-top: -3px;}
 .shop_title{display: inline-block;border-bottom: 1px solid gainsboro;font-size: .8rem;font-weight: bold}
+#shopping_list{margin-bottom: 83px;}
     /*底部导航*/
 .total_price{color:red;font-size: .6rem;line-height: 2.5rem;font-weight: bold;text-align: right}
 .description{margin-top: -20px;}
@@ -62,7 +63,7 @@ img{border-radius: 0.15rem;}
 
 
 /*product_detail page*/
-#page_product_info .content{margin-bottom: 0}
+#page_product_info .content{margin-bottom: 0px}
 #page_product_info .content-block{margin: 0}
 #page_product_info .list-block{margin: 0 0 1rem 0 }
 #page_product_info .swiper-slide img{width: 100%;}

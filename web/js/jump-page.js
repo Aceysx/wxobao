@@ -11,12 +11,21 @@ $(document).on('refresh', '.pull-to-refresh-content',function(e) {
     $.toast("刷新成功");
 });
 
+//product_info popup close when go back
+$(document).ready(function(e) {
+    $(window).on('popstate', function () {
+        // $(".popup").remove();
+        // $(".popup-overlay").remove();
+        $.closeModal(".popup");
+    });
+});
+
 //ajax页面跳转刷新
 $(document).on("pageInit",function (e,pageId,$page) {
     //获取 url 中的参数
     ids = getIds(location.href);
     //每个页面都判断用户是否非法登录（非微信客户端进入页面）
-    // uid = getUserId();
+    uid = getUserId();
 
 /**
  * 主页

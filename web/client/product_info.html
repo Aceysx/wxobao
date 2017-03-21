@@ -75,7 +75,7 @@
                     <span class="icon icon-star"></span><br>
                     <span id="collect">收藏</span>
             </div>
-            <div style="width: 27%" onclick="add(this)" class="add open-popup open-about"  data-popup=".popup-about">加入购物车</div>
+                <div style="width: 27%" onclick="add(this)" class="add open-popup open-about"  data-popup=".popup-about">加入购物车</div>
             <div style="width: 28%" onclick="buy(this)" class="buy open-popup open-about"  data-popup=".popup-about">立即购买</div>
         </footer>
         <!--选择商品规格弹出框 每次路由跳转不同页面都会创建一个popup导致出现多个相同id，所以全部改成class防止多个id失效-->
@@ -128,14 +128,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            setTimeout(function () {
-                window.addEventListener("popstate",function (e) {
-                    $(".popup").addClass("poppup-overlay").hide();
-//                    location.replace(document.referrer)
-                },false)
-            },300)
-        </script>
     </div>
 
 </div>

@@ -215,8 +215,9 @@ function buy_to_order() {
     _html += "<div class='item-media'><img src='"+pimg+"' width='68rem' height='68rem'></div><div class='item-inner'>";
     _html += "<div class='item-title produt_name_style'><b>"+productName+"</b></div>";
     _html += "<div class='item-title placeorder_kinds'>"+classifys+"</div>";
-    _html += "<div class='item-title number'>数量:<span class='place_order_number'>"+buyNumber+"</span></div><div class='item-title-row'>";
+    _html += "<div class='item-title number'>店名:<span class='place_order_number'>"+buyNumber+"</span></div><div class='item-titile-row'>";
     _html += "<div class='item-title price_style placeorder_price'><b>￥<span class='place_order_price'>"+price+"</span>元</b></div>";
+    _html += "</div></div></a></li></ul></div><div class='list-block choose_time'><ul><li>";
     _html += "</div></div></a></li></ul></div><div class='list-block choose_time'><ul><li>";
     _html += "<div class='item-content'><div class='item-inner'><div class='item-title label'>取餐时间：</div><div class='item-input'>";
     _html += "<input type='hidden' class='businessId'  value='"+businessId+"'/>";

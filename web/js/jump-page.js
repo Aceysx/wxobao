@@ -16,6 +16,7 @@ $(document).ready(function(e) {
     $(window).on('popstate', function () {
         // $(".popup").remove();
         // $(".popup-overlay").remove();
+        // alert(22);
         $.closeModal(".popup");
     });
 });

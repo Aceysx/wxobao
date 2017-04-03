@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	 http://www.springframework.org/schema/beans/spring-beans.xsd
+     	 http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop.xsd
+         http://www.springframework.org/schema/tx
+     	 http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<!-- product -->
+	<bean id="cartAction" class="com.obao.client.action.cart.CartAction"
+		scope="prototype">
+		<property name="cartService" ref="cartService"></property>
+		<property name="userService" ref="userService"></property>
+		<property name="productService" ref="productService"></property>
+	</bean>
+	<!--order-->
+	<bean id="orderAction" class="com.obao.client.action.order.OrderAction" scope="prototype">
+		<property name="orderService" ref="orderService"></property>
+	</bean>
+	<bean id="userAction" class="com.obao.client.action.user.UserAction"
+		scope="prototype">
+		<property name="userService" ref="userService"></property>
+		<property name="productService" ref="productService"></property>
+	</bean>
+	<bean id="productAction" class="com.obao.client.action.product.ProductAction"
+		scope="prototype">
+		<property name="productService" ref="productService"></property>
+	</bean>
+	<bean id="businessAction" class="com.obao.client.action.business.BusinessAction"
+		  scope="prototype">
+		<property name="businessService" ref="businessService"></property>
+	</bean>
+	<bean id="collectAction" class="com.obao.client.action.collection.CollectAction"
+		  scope="prototype">
+		<property name="collectService" ref="collectService"></property>
+	</bean>
+	<bean id="weChatAction" class="com.obao.wechat.RenzhengAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+ 	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+

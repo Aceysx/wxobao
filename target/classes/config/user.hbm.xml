@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.obao.entity">
+    <class name="User" table="t_user" >
+        <id name="userId" type="string">
+            <column name="user_id" />
+            <generator class="assigned" />
+        </id>
+    <property name="nickname" type="string" />
+    <property name="openid" type="string" />
+    <property name="sex" type="integer" />
+    <property name="province" type="string" />
+    <property name="headimgurl" type="string" />
+    </class>
+</hibernate-mapping>

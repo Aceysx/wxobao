@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.obao.entity">
+	<class name="Banner" table="t_banner">
+		<id name="bannerId" type="integer">
+			<column name="banner_id" />
+			<generator class="native" />
+		</id>
+		<property name="productId" type="integer">
+			<column name="product_id"/>
+		</property>
+		<property name="addTime" type="timestamp">
+			<column name="add_time" />
+		</property>
+		<property name="url" type="string">
+			<column name="url" />
+		</property>
+		<property name="show" type="integer">
+			<column name="show" default="0" />
+		</property>
+	</class>
+</hibernate-mapping>

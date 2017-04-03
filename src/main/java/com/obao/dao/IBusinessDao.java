@@ -1,0 +1,39 @@
+package com.obao.dao;
+
+
+import com.obao.entity.BusinessDomain;
+import com.obao.entity.Product;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2016/11/8.
+ */
+public interface IBusinessDao {
+
+    /**
+     * 查找全部区域
+     */
+    List<BusinessDomain> findDomains();
+
+    /**
+     * 根据商家ID查找商家下全部商品
+     * @param id
+     * @return
+     */
+    List<Object> findBusinessById(Integer id);
+
+    /**
+     * 查找区域下全部商家列表
+     * @param id 区域id
+     * @return
+     */
+    List<Object> findBusinessList(Integer id);
+
+    /**
+     * 根据产品ID查找商家ID
+     * @param product
+     * @return
+     */
+    Integer findBusinessIdByProduct(Product product);
+}

@@ -9,7 +9,6 @@
         var headimgurl = "${requestScope.user.headimgurl}";
         var userId = "${requestScope.user.userId}";
         var sex = "${requestScope.user.sex}";
-
         //如果 openid 为空重新跳转授权
         if(openid == null){
             turn_to_auto();

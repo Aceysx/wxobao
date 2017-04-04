@@ -18,7 +18,6 @@ public class Business {
     private Integer state;//状态
     private Date registerTime;
     private String remark;//主营
-    private Set<Product> products = new HashSet<Product>();//商家下所有产品
     private Integer domainId;
 
     public Integer getDomainId() {
@@ -69,9 +68,6 @@ public class Business {
         this.remark = remark;
     }
 
-    public void setProducts(Set<Product> products) {
-        this.products = products;
-    }
 
     public Integer getBusinessId() {
         return businessId;
@@ -113,9 +109,6 @@ public class Business {
         return remark;
     }
 
-    public Set<Product> getProducts() {
-        return products;
-    }
 
     @Override
     public String toString() {
@@ -130,7 +123,6 @@ public class Business {
                 ", state=" + state +
                 ", registerTime=" + registerTime +
                 ", remark='" + remark + '\'' +
-                ", products=" + products +
                 ", domainId=" + domainId +
                 '}';
     }

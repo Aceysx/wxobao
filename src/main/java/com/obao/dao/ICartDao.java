@@ -21,7 +21,7 @@ public interface ICartDao {
 	 * 保存产品项
 	 * @param productItem
      */
-	void save(ProductItem productItem);
+	void saveOrUpdate(ProductItem productItem);
 
 	/**
 	 * 查找用户购物车

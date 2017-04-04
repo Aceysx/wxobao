@@ -1,6 +1,7 @@
 package com.obao.wechat;
 
 
+import com.obao.entity.Cart;
 import com.obao.entity.User;
 import com.obao.service.IUserService;
 import com.opensymphony.xwork2.ActionSupport;
@@ -8,6 +9,7 @@ import net.sf.json.JSONObject;
 import org.apache.struts2.ServletActionContext;
 
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * Created by Acey on 2017/1/8.
@@ -37,15 +39,15 @@ public class RenzhengAction extends ActionSupport {
      */
     @Override
     public String execute() throws Exception {
-            if(SignUtil.checkSignature(signature, timestamp, nonce)){
-                try {
-                    ServletActionContext.getResponse().getWriter().write(echostr);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        if(SignUtil.checkSignature(signature, timestamp, nonce)){
+            try {
+                ServletActionContext.getResponse().getWriter().write(echostr);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            return null;
         }
+        return null;
+    }
 
     /**
      * 授权
@@ -62,27 +64,32 @@ public class RenzhengAction extends ActionSupport {
             openid = jsonObject.getString("openid");
 
             //判断该用户的openid是否存在，如果不存保存该用户信息
-            if(!userService.openidIsExist(openid)){
+            user = userService.findByOpenid(openid);
+            if(user == null){
                 //获取用户信息
                 get_userinfo = get_userinfo.replace("ACCESS_TOKEN", access_token);
                 get_userinfo = get_userinfo.replace("OPENID", openid);
 
                 String userInfoJson=HttpUtil.getUrl(get_userinfo);
 
-                JSONObject userInfoJO= JSONObject.fromObject(userInfoJson);
+                JSONObject userInfoJO=JSONObject.fromObject(userInfoJson);
                 User userInfo = new User();
                 userInfo.setOpenid(userInfoJO.getString("openid"));
                 userInfo.setNickname(userInfoJO.getString("nickname"));
                 userInfo.setSex(Integer.parseInt(userInfoJO.getString("sex")));
                 userInfo.setProvince(userInfoJO.getString("province"));
                 userInfo.setHeadimgurl(userInfoJO.getString("headimgurl"));
+
+                userInfo.setUserId(UUID.randomUUID().toString().replace("-",""));
+
+                Cart cart = new Cart();
+                cart.setCartId(userInfo.getUserId());
                 //保存用户信息
                 userService.saveOrUpdate(userInfo);
+                userService.saveCart(cart);
+                user = userInfo;
             }
-            //再查询该用户信息
-            user = userService.findByOpenid(openid);
-
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return "index";
@@ -96,32 +103,32 @@ public class RenzhengAction extends ActionSupport {
     }
 
     public void setSignature(String signature) {
-            this.signature = signature;
-        }
+        this.signature = signature;
+    }
 
-        public String getTimestamp() {
-            return timestamp;
-        }
+    public String getTimestamp() {
+        return timestamp;
+    }
 
-        public void setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-        }
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
 
-        public String getNonce() {
-            return nonce;
-        }
+    public String getNonce() {
+        return nonce;
+    }
 
-        public void setNonce(String nonce) {
-            this.nonce = nonce;
-        }
+    public void setNonce(String nonce) {
+        this.nonce = nonce;
+    }
 
-        public String getEchostr() {
-            return echostr;
-        }
+    public String getEchostr() {
+        return echostr;
+    }
 
-        public void setEchostr(String echostr) {
-            this.echostr = echostr;
-        }
+    public void setEchostr(String echostr) {
+        this.echostr = echostr;
+    }
 
     public String getCode() {
         return code;

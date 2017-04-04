@@ -13,7 +13,7 @@ $(function () {
 /**
  * 商品详情
  */
-    //collection图标状态改变
+//collection图标状态改变
 function change_collect(t){
     if($(t).hasClass("hasCollect")){
         $(t).removeClass("hasCollect");
@@ -25,7 +25,7 @@ function change_collect(t){
         $.toast("收藏成功")
     }
 }
-    //商品类别状态改变
+//商品类别状态改变
 function sizes_active(t,index) {
     size_index = index;//改变尺寸下标
     $(t).addClass("active").siblings().removeClass("active");//样式改变
@@ -35,7 +35,7 @@ function flavors_active(t,index) {
     flavor_index = index;//改变口味下标
     $(t).addClass("active").siblings().removeClass("active");
 }
-    //数量加减
+//数量加减
 function product_reduce() {
     if(number == 1){
         return ;
@@ -49,7 +49,7 @@ function product_add() {
     $(".number").val(number);
     show_price();
 }
-    //计算价钱
+//计算价钱
 function show_price() {
     if(size_index != -1){//如果尺寸下标不为-1，则使用该尺寸的价钱
         var price = sizes[size_index].price * number;
@@ -58,7 +58,7 @@ function show_price() {
     }
     $(".change_price").text("￥" + price);
 }
-    //加入购物车 or 购买
+//加入购物车 or 购买
 function buy(){
     $("#info_popup-about").removeClass("close-popup");
     $(".ok").removeClass("shopping").addClass("buying");
@@ -94,7 +94,7 @@ function isBuy() {
 /**
  * 购物车
  */
-    //商家checkbox改变
+//商家checkbox改变
 function business_select(t) {
     if($(t).find(".business_select").is(":checked")){
         //当前商家chekbox选中时，选中该商家下所有商品
@@ -108,7 +108,7 @@ function business_select(t) {
     //计算总价
     show_all_price();
 }
-    //商品checkbox改变时
+//商品checkbox改变时
 function product_select(t) {
     var business = $(t).siblings(".business")[0];//获取商品所属的商家
     var products = $(business).siblings(".product");//获取该商家下的所有商品
@@ -125,7 +125,7 @@ function product_select(t) {
     //计算总价
     show_all_price();
 }
-    //全选checkbox改变时
+//全选checkbox改变时
 function all_select(t) {
     if($(t).find(".all_select").is(":checked")){
         $(".business_product").find(".business_select").prop("checked",true);
@@ -137,7 +137,7 @@ function all_select(t) {
     //计算总价
     show_all_price();
 }
-    //全选判断
+//全选判断
 function one_product_all() {
     var products = $(".product");//获取所有商品
     var select_products = $(".product").find("input[name='product']:checked");//获取选中的所有商品
@@ -148,7 +148,7 @@ function one_product_all() {
     }
 
 }
-    //计算总价
+//计算总价
 function show_all_price() {
     var price = 0;
     var products = $(".product");
@@ -159,7 +159,7 @@ function show_all_price() {
     }
     $(".total_price").text(price);
 }
-    //删除商品
+//删除商品
 function delete_product(t) {
     var item_id = $(t).find(".item_id").val();//获取商品项id
     delete_product_item_ajax(item_id);
@@ -197,7 +197,7 @@ function delete_product(t) {
 /**
  * 下单页面填充
  */
-    // -- >商品详情页面跳转下单页面
+// -- >商品详情页面跳转下单页面
 function buy_to_order() {
 
     var productId = product_info.product_id;
@@ -231,10 +231,10 @@ function buy_to_order() {
     $("#order_content").append(_html);
     place_order_allprice();
 }
-    // -- >购物车页面跳转下单页面
+// -- >购物车页面跳转下单页面
 function shopping_to_order() {
 }
-    //计算价格
+//计算价格
 function place_order_allprice() {
     var place_order_allprice = 0;
     var product =  $(".placeorder_product");
@@ -247,7 +247,7 @@ function place_order_allprice() {
 /**
  * 个人中心
  */
-    //个人中心页面
+//个人中心页面
 function person() {
 
     var info = getUserInfo();
@@ -256,7 +256,7 @@ function person() {
     $("#person_img").attr({src: img});
     $("#person_name").text(name);
 }
-    //个人信息页面
+//个人信息页面
 function person_info() {
     var info = getUserInfo();
     $("#personInfo_name").text(info.userName);

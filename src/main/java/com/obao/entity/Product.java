@@ -8,6 +8,8 @@ import java.util.Date;
  */
 public class Product {
     private Integer productId;//商品id
+    private Integer businessId;
+    private Integer sortId;
     private String productName;//商品名
     private String productImg;//商品图片
     private double oldPrice;//原价
@@ -99,5 +101,19 @@ public class Product {
         this.remark = remark;
     }
 
+    public Integer getBusinessId() {
+        return businessId;
+    }
 
+    public void setBusinessId(Integer businessId) {
+        this.businessId = businessId;
+    }
+
+    public Integer getSortId() {
+        return sortId;
+    }
+
+    public void setSortId(Integer sortId) {
+        this.sortId = sortId;
+    }
 }

@@ -1,9 +1,8 @@
 // var host = "http://192.168.1.109:8080/";
 // var host = "http://192.168.1.106:8080/";
-var host = "http://localhost:8080/";
-// var host = "http://obao.tunnel.2bdata.com/";
+var host = "http://obao.tunnel.2bdata.com/";
 var host_img = host+"/upload/";
-var uid = 'b6078046a4424c0992dfbe9229dc2850'; // 测试用 b6078046a4424c0992dfbe9229dc2850
+var uid = ''; // 测试用 b6078046a4424c0992dfbe9229dc2850
 //商品详情
 var flavors;//商品口味
 var sizes;//商品尺寸
@@ -23,8 +22,8 @@ function banners_ajax() {
             if(data.result == true){
                 data = data.data;
                 for(var i = 1; i < data.length+1; ++i) {
-                  $("#banner_id_"+i).find("img").attr({src:host_img+"/banner/"+data[i-1].url});
-                  $("#banner_id_"+i).find("a").attr({href:"product_info.html?"+data[i-1].productId+"?"+new Date().getTime()});
+                    $("#banner_id_"+i).find("img").attr({src:host_img+"/banner/"+data[i-1].url});
+                    $("#banner_id_"+i).find("a").attr({href:"product_info.html?"+data[i-1].productId+"?"+new Date().getTime()});
                 }
             }
         }
@@ -96,33 +95,33 @@ function range_ajax() {
 //促销商品
 function promotion_products_ajax() {
     $.ajax({
-            url: host + "product_promotionProducts.htm",
-            type: "post",
-            data: "",
-            success: function (data) {
-                if(data.result == true){
-                    $("#promotion").html("");
-                    data = data.data;
-                    var _html = "";
-                    var id,img_url,name,sales,price;
-                    for(var i = 0; i < data.length; ++i) {
-                         id = data[i].product_id;
-                         img_url = host_img+"product/"+data[i].product_img;
-                         sales = data[i].sales;
-                         price = data[i].new_price;
-                         name = data[i].product_name;
+        url: host + "product_promotionProducts.htm",
+        type: "post",
+        data: "",
+        success: function (data) {
+            if(data.result == true){
+                $("#promotion").html("");
+                data = data.data;
+                var _html = "";
+                var id,img_url,name,sales,price;
+                for(var i = 0; i < data.length; ++i) {
+                    id = data[i].product_id;
+                    img_url = host_img+"product/"+data[i].product_img;
+                    sales = data[i].sales;
+                    price = data[i].new_price;
+                    name = data[i].product_name;
 
-                        _html += "<li><a href='product_info.html?"+id+"?"+new Date().getTime()+"' class='item-link item-content'>";
-                        _html += "<div class='item-media'><img src='"+img_url+"' ></div>";
-                        _html += "<div class='item-inner'><div class='item-title '><b style='product_name_style'>"+name+"</b></div>";
-                        _html += "<div class='item-title'>  </div><div class='item-title price_style'>$ <b>"+price+"</b></div>";
-                        _html += "<div class='item-title-row'><div class='item-title '>销量："+sales+" </div>";
-                        _html += "</div></div></a></li>";
-                    }
-                    $("#promotion").append(_html);
+                    _html += "<li><a href='product_info.html?"+id+"?"+new Date().getTime()+"' class='item-link item-content'>";
+                    _html += "<div class='item-media'><img src='"+img_url+"' ></div>";
+                    _html += "<div class='item-inner'><div class='item-title '><b style='product_name_style'>"+name+"</b></div>";
+                    _html += "<div class='item-title'>  </div><div class='item-title price_style'>$ <b>"+price+"</b></div>";
+                    _html += "<div class='item-title-row'><div class='item-title '>销量："+sales+" </div>";
+                    _html += "</div></div></a></li>";
                 }
+                $("#promotion").append(_html);
             }
-        });
+        }
+    });
 }
 //热门商品
 function hot_products_ajax() {
@@ -183,7 +182,7 @@ function business_list_ajax(bid) {
                     _html += "<div class='item-title'><font color='#21a1a1'><b>总销量："+sales+"</b></font></div>";
                     _html += "</div></div></a></li>";
                 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        $("#business_list").append(_html);
+                $("#business_list").append(_html);
             }
         }
     });
@@ -394,7 +393,7 @@ function shopping_ajax() {
     $.ajax({
         url:host+"cart_findMyCart.htm",
         type:"post",
-            data:{userId:uid},
+        data:{userId:uid},
         success:function (data) {
             if(data.result){
                 data = data.data;

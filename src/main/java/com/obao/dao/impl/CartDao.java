@@ -24,8 +24,8 @@ public class CartDao implements ICartDao {
 	}
 
 	@Override
-	public void save(ProductItem productItem) {
-		sessionFactory.getCurrentSession().save(productItem);
+	public void saveOrUpdate(ProductItem productItem) {
+		sessionFactory.getCurrentSession().saveOrUpdate(productItem);
 	}
 
 	@Override

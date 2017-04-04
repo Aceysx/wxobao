@@ -25,10 +25,10 @@ public class CartService implements ICartService {
            if(productItem != null){
                Integer number = productItem.getProductNumber() + item.getProductNumber();
                productItem.setProductNumber(number);
-               cartDao.save(productItem);
+               cartDao.saveOrUpdate(productItem);
                return true;
            }else{
-               cartDao.save(item);
+               cartDao.saveOrUpdate(item);
                return  true;
            }
        }catch (Exception e){

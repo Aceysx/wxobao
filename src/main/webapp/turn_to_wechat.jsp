@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<script src="js/wechat.js"></script>
+<script src="client/js/wechat.js"></script>
 
 <script>
     window.onload = function() {
@@ -17,6 +17,6 @@
         //设置个人信息到cookie
         setUserInfo(openid,nickname,headimgurl,userId,sex);
         //跳转主页
-        location.href = "http://obao.tunnel.2bdata.com/client/index.html?"+new Date().getTime();
+        location.href = "http://obao.tunnel.2bdata.com/client/page/index.html?"+new Date().getTime();
     }
 </script>

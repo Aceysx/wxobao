@@ -201,12 +201,11 @@ function business_info_ajax(bid) {
                 data = data.data;
                 var business_html = "";
                 var product_html = "";
-                var id,pimg_url,bimg_url,phone,pname,bname,sales,remark,address,new_price,old_price;
+                var id,pimg_url,bimg_url,phone,pname,bname,sales,remark,address,new_price;
                 for(var i = 0; i < data.length; ++i) {
                     address = data[i].address;
                     bname = data[i].name;
                     new_price = data[i].new_price;
-                    old_price = data[i].old_price;
                     phone = data[i].phone;
                     pname = data[i].product_name;
                     id = data[i].product_id;
@@ -225,8 +224,7 @@ function business_info_ajax(bid) {
                     product_html += "<li><a href='product_info.html?"+id+"' class='item-link item-content'>";
                     product_html += "<div class='item-media'><img src='"+pimg_url+"'></div>";
                     product_html += "<div class='item-inner'><div class='item-title produt_name_style'><b style='product_name_style'>"+pname+"</b></div>";
-                    product_html += "<div class='item-title'><s>原价:$ "+old_price+"</s></div>";
-                    product_html += "<div class='item-title-row'><div class='item-title'><font color='red'><b>促销价: $ "+new_price+"</b></font></div>";
+                    product_html += "<div class='item-title-row'><div class='item-title'><font color='red'><b>价格: ￥ "+new_price+"</b></font></div>";
                     product_html += "<div class='item-after'>销量:"+sales+"</div></div></div></a></li>";
                 }
                 $("#business_info").append(business_html);
@@ -261,8 +259,7 @@ function product_detail_ajax(pid) {
                 $("#imgs2").attr({src: host_img + "product/" + imgs[2].img});
 
                 $("#product_name").text(product_info.product_name);
-                $("#bargain_price").text("促销价：￥" + product_info.new_price);
-                $("#old_price").text("价格：￥" + product_info.old_price);
+                $("#bargain_price").text("价格：￥" + product_info.new_price);
                 $("#sales").text("销量：" + product_info.sales);
                 $("#business_name").text(product_info.name);
                 $("#remark").text(product_info.remark);

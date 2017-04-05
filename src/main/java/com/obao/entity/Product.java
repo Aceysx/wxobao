@@ -12,8 +12,7 @@ public class Product {
     private Integer sortId;
     private String productName;//商品名
     private String productImg;//商品图片
-    private double oldPrice;//原价
-    private double newPrice;//促销价
+    private double newPrice;
     private Date addTime;//添加时间
     private Integer state;//状态 0 正常 1 删除
     private String remark;//商品详情
@@ -60,13 +59,6 @@ public class Product {
     }
 
 
-    public double getOldPrice() {
-        return oldPrice;
-    }
-
-    public void setOldPrice(double oldPrice) {
-        this.oldPrice = oldPrice;
-    }
 
     public double getNewPrice() {
         return newPrice;

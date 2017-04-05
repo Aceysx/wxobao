@@ -28,7 +28,7 @@ public class BusinessDao implements IBusinessDao {
     @Override
     public List<Object> findBusinessById(Integer id) {
         StringBuffer sql = new StringBuffer();
-        sql.append(" select b.name,b.address,b.phone,b.photo,b.remark,p.product_id,p.product_name,p.product_img,p.old_price,p.new_price,p.sales ");
+        sql.append(" select b.name,b.address,b.phone,b.photo,b.remark,p.product_id,p.product_name,p.product_img,p.new_price,p.sales ");
         sql.append(" from t_product p ");
         sql.append(" left join(select name,business_id,address,phone,photo,remark from t_business) b on p.business_id = b.business_id ");
         sql.append(" where p.business_id=").append(id).append(" order by p.sales desc");

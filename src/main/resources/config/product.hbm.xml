@@ -15,9 +15,6 @@
             <column name="product_img"/>
         </property>
         <property name="sortId" type="integer" column="sort_id"/>
-        <property name="oldPrice" type="double">
-            <column name="old_price"/>
-        </property>
         <property name="newPrice" type="double">
             <column name="new_price"/>
         </property>

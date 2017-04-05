@@ -106,28 +106,6 @@ public class ProductAction extends ActionSupport {
         resultData = resultData.success(domains);
         return "resultData";
 	}
-    /**
-     * 添加商品
-     * @return
-     */
-    public String add(){
-			for(int i = 0 ; i < 50; ++i) {
-				Product product = new Product();
-				product.setState(0);
-				product.setProductName("哈哈"+i);
-				product.setPromotion(1);
-				product.setNewPrice(i*10);
-				product.setAddTime(new Date());
-				product.setSales(0);
-				product.setRemark("free");
-				productService.save(product);
-			}
-			msg = "添加成功";
-//		}
-		return "addSuccess";
-	}
-
-
 
 
 	/**

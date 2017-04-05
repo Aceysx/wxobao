@@ -89,7 +89,7 @@ public class ProductDao implements IProductDao {
     @Override
     public Object findDetailById(Integer id) {
         StringBuffer sql = new StringBuffer();
-        sql.append(" SELECT p.product_id,p.product_name,p.product_img,p.new_price,p.old_price,p.sales,p.remark,b.* FROM t_product p ");
+        sql.append(" SELECT p.product_id,p.product_name,p.product_img,p.new_price,p.sales,p.remark,b.* FROM t_product p ");
         sql.append(" left join(select business_id,name from t_business) b on b.business_id = p.business_id ");
         sql.append(" where p.product_id = ").append(id);
         return sessionFactory.getCurrentSession().createSQLQuery(sql.toString()).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).uniqueResult();

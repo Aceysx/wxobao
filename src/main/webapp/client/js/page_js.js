@@ -194,6 +194,30 @@ function delete_product(t) {
     show_all_price();
 }
 
+function delete_shopping_item() {
+    var select_products_all = $(".product").find("input[name='product']:checked");//获取选中的所有商品
+    if(select_products_all.length == 0){
+        $.alert("请先选择一件商品", "提示");
+    }else{
+        $.confirm("确定删除?",function () {
+            for(var i = 0; i < select_products_all.length; ++i) {
+                var item_id = $($(select_products_all[i]).parents(".product")).find(".item_id").val();//获取商品项id
+                delete_product_item_ajax(item_id);
+                $(select_products_all[i]).parents(".product").remove();
+            }
+            var busnesses = $(".business_product");
+            for(var i = 0; i < busnesses.length; ++i) {
+                if($(busnesses[i]).find(".product").length == 0)
+                    $(busnesses[i]).remove();
+            }
+          }
+        );
+
+    }
+
+
+}
+
 /**
  * 下单页面填充
  */

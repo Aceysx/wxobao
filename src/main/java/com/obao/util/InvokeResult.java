@@ -1,10 +1,5 @@
 package com.obao.util;
 
-/**
- * 门面调用封装
- * @author eason
- *
- */
 public class InvokeResult {
 
     private Object data;

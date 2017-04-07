@@ -20,7 +20,7 @@ public interface ICartService {
 	List<Object> findCart(String userId);
 
 	/**
-	 * 删除购物车
+	 * 删除购物车商品项
      */
 	void delete(ProductItem item);
 }

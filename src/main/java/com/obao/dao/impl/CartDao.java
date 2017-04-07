@@ -41,7 +41,7 @@ public class CartDao implements ICartDao {
 
 	@Override
 	public void deleteProductItem(ProductItem item) {
-		sessionFactory.getCurrentSession().delete(item);
+		sessionFactory.getCurrentSession().createQuery("delete from ProductItem where productItemId=?").setParameter(0,item.getProductItemId()).executeUpdate();;
 	}
 
 

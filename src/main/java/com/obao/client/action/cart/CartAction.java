@@ -44,7 +44,6 @@ public class CartAction extends ActionSupport {
     }
     /**
      * 删除购物车
-     *
      * @return
      */
     public String delete(){

@@ -1,5 +1,6 @@
 var ids;
 
+
 //主页下拉刷新
 $(document).on('refresh', '.pull-to-refresh-content',function(e) {
     banners_ajax();
@@ -10,7 +11,6 @@ $(document).on('refresh', '.pull-to-refresh-content',function(e) {
     $.pullToRefreshDone('.pull-to-refresh-content');
     $.toast("刷新成功");
 });
-
 //product_info popup close when go back
 $(document).ready(function(e) {
     $(window).on('popstate', function () {

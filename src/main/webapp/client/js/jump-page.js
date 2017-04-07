@@ -1,5 +1,5 @@
 var ids;
-
+var pageID;
 
 //主页下拉刷新
 $(document).on('refresh', '.pull-to-refresh-content',function(e) {
@@ -14,15 +14,19 @@ $(document).on('refresh', '.pull-to-refresh-content',function(e) {
 //product_info popup close when go back
 $(document).ready(function(e) {
     $(window).on('popstate', function () {
-        // $(".popup").remove();
-        // $(".popup-overlay").remove();
-        // alert(22);
-        $.closeModal(".popup");
+        if(pageID == "page_placeorder"){
+            $(".popup-overlay").removeClass(".modal-overlay-visible");
+            $("#info_popup-about").removeClass(".modal-in");
+            $("#info_popup-about").css({display:"none"});
+        }else {
+            $.closeModal(".popup");
+        }
     });
 });
 
 //ajax页面跳转刷新
 $(document).on("pageInit",function (e,pageId,$page) {
+    pageID = pageId;
     //获取 url 中的参数
     ids = getIds(location.href);
     //每个页面都判断用户是否非法登录（非微信客户端进入页面）

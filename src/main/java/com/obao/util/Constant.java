@@ -1,10 +1,6 @@
 package com.obao.util;
 
-/**
- * 常量
- * @author 代江平
- * @date 创建时间：2016年8月20日 下午3:04:33
- */
+
 public class Constant {
     public static final String EXCEPTION_TIP = "操作失败，请稍后在试";//发生异常后提示
 
@@ -14,6 +10,9 @@ public class Constant {
     public static final String CANCEL_COLLECT = "取消收藏";//取消收藏成功
     public static final String ADD_CART = "添加成功";//购物车添加成功
     public static final String DELETE_CART = "删除成功";//购物车删除成功
+    public static final String OPERATION_SUCCESS ="操作成功";
+    public static final String EDIT_PRODUCT_SUCCESS = "编辑成功";
+    public static final String ADD_PRODUCT_SUCCESS = "添加成功";
 
 
 }

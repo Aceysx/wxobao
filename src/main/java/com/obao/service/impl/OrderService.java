@@ -37,7 +37,7 @@ public class OrderService implements IOrderService {
             randomNum = ""+random.nextInt(10)+random.nextInt(10)+random.nextInt(10)+random.nextInt(10);
 
             order.setOrderNumber(uuid);
-            order.setCode(randomNum);
+            order.setMealCode(randomNum);
 
             orderDao.save(order);
         }

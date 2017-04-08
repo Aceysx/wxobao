@@ -10,14 +10,16 @@ public class Product {
     private Integer productId;//商品id
     private Integer businessId;
     private Integer sortId;
-    private String productName;//商品名
-    private String productImg;//商品图片
-    private double newPrice;
-    private Date addTime;//添加时间
-    private Integer state;//状态 0 正常 1 删除
-    private String remark;//商品详情
+    private Integer state;//状态 0 正常 1 删除 2 下架
     private Integer promotion;//是否促销 0不是 1 是
     private Integer sales = 0;//销量
+    private String productName;//商品名
+    private String productImg;//商品图片
+    private String remark;//商品详情
+    private double newPrice;
+    private Date addTime;//添加时间
+
+
 
     public Integer getPromotion() {
         return promotion;

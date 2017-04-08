@@ -17,12 +17,12 @@
 	<!-- 4. 修改上传文件的最大大小为3M -->
 	<constant name="struts.multipart.maxSize" value="3145728" />
 
-	<include file="config/cart-struts.xml"></include>
-	<include file="config/user-struts.xml"></include>
-	<include file="config/product-struts.xml"></include>
-	<include file="config/businessDomain-struts.xml"></include>
-	<include file="config/business-struts.xml"></include>
-	<include file="config/order-struts.xml"></include>
-	<include file="config/collect-struts.xml"></include>
-	<include file="config/wechat-struts.xml"></include>
+	<include file="config/client/cart-struts.xml"></include>
+	<include file="config/client/user-struts.xml"></include>
+	<include file="config/client/product-struts.xml"></include>
+	<include file="config/client/businessDomain-struts.xml"></include>
+	<include file="config/client/business-struts.xml"></include>
+	<include file="config/client/order-struts.xml"></include>
+	<include file="config/client/collect-struts.xml"></include>
+	<include file="config/client/wechat-struts.xml"></include>
 </struts>

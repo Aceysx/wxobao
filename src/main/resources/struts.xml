@@ -25,4 +25,9 @@
 	<include file="config/client/order-struts.xml"></include>
 	<include file="config/client/collect-struts.xml"></include>
 	<include file="config/client/wechat-struts.xml"></include>
+
+	<include file="config/business/order-struts.xml"></include>
+	<include file="config/business/collect-struts.xml"></include>
+	<include file="config/business/wechat-struts.xml"></include>
+
 </struts>

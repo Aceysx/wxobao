@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商家主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="../../css/light7.min.css">
+    <script type='text/javascript' src='../../js/jquery.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script>
+    <script src="../../js/demos.js"></script>
+    <!--如果你用到了拓展包中的组件，还需要引用对应的JS文件-->
+    <link rel="stylesheet" href="../../css/light7-swiper.min.css">
+    <script type='text/javascript' src='../../js/light7-swiper.min.js' charset='utf-8'></script>
+    <!--滑动-->
+    <script src="../../js/light7-swipeout-min.js"></script>
+    <link href="../../css/light7-swipeout-min.css" rel="stylesheet">
+    <!--自己的css-->
+    <style>
+        *{font-size: 14px}
+        body{font-size: 12px}
+        #index_bar{background-color: #20a1a1;}
+        #index_bar a{color: white}
+        #order_tab a{font-size: 13px}
+        .item-media img{width: 4.2rem;height: 4.2rem}
+        .content-block{padding: 0;margin-top: -38px}
+        .get_num{float: right;margin-right: 100px}
+        .row{float: right;margin-top: -186px;margin-right: 10px;}
+        .client,.ok_order{margin-top: 20px;background-color: #20a1a1}
+
+    </style>
+</head>
+<body>
+
+<div class="page page-current" id="index_page" >
+    <header class="bar bar-nav">
+        <div class="searchbar" id="index_bar">
+            <a class="searchbar-cancel">取消</a>
+            <div class="search-input">
+                <label class="icon icon-search" for="search"></label>
+                <input type="search" id='search' placeholder='输入取餐码查询订单'/>
+            </div>
+        </div>
+    </header>
+    <div class="content" id="orders">
+        <div class="buttons-tab" id="order_tab">
+            <a href="#tab1" class="tab-link active button">最新订单</a>
+            <a href="#tab2" class="tab-link button">处理中订单</a>
+            <a href="#tab3" class="tab-link button">待领取订单</a>
+        </div>
+        <div class="content-block">
+            <div class="tabs">
+                <div id="tab1" class="tab active">
+                    <div class="content-block" >
+                        <div class="tab_no_deal">
+                            <div class="list-block media-list">
+                                <ul >
+                                    <li >
+                                        <a href="#" class="item-link item-content">
+                                            <div class="item-media">
+                                                <img src="../../img/1.png" ></div>
+                                            <div class="item-inner">
+                                                <div class="item-title produt_name_style">name</div>
+                                                <div class="item-title">取餐时间</div>
+                                                <div class="item-title">类别</div>
+                                                <div class="item-title get_num">取餐码</div>
+                                                <div class="item-title-row">
+                                                    <div class="item-title price_style"><b>$15</b></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p><a href="#" class="button button-fill ">接受订单 </a></p>
+                                                <p><a href="#" class="button button-fill button-warning">拒绝订单 </a></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block" >
+                        <div class="tab_no_deal">
+                            <div class="list-block media-list">
+                                <ul >
+                                    <li >
+                                        <a href="#" class="item-link item-content">
+                                            <div class="item-media">
+                                                <img src="../../img/1.png" ></div>
+                                            <div class="item-inner">
+                                                <div class="item-title produt_name_style">name</div>
+                                                <div class="item-title">取餐时间</div>
+                                                <div class="item-title">类别</div>
+                                                <div class="item-title get_num">取餐码</div>
+                                                <div class="item-title-row">
+                                                    <div class="item-title price_style"><b>$15</b></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p><a href="#" class="button button-fill ">接受订单 </a></p>
+                                                <p><a href="#" class="button button-fill button-warning">拒绝订单 </a></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="tab">
+                    <div class="content-block">
+                        <div class="tab_no_deal">
+                            <div class="list-block media-list">
+                                <ul >
+                                    <li >
+                                        <a href="#" class="item-link item-content">
+                                            <div class="item-media">
+                                                <img src="../../img/1.png" ></div>
+                                            <div class="item-inner">
+                                                <div class="item-title produt_name_style">name</div>
+                                                <div class="item-title">取餐时间</div>
+                                                <div class="item-title">类别</div>
+                                                <div class="item-title get_num">取餐码</div>
+                                                <div class="item-title-row">
+                                                    <div class="item-title price_style"><b>$15</b></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p><a href="#" class="button button-fill client">通知客户</a></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab3" class="tab">
+                    <div class="content-block">
+                        <div class="tab_no_deal">
+                            <div class="list-block media-list">
+                                <ul >
+                                    <li >
+                                        <a href="#" class="item-link item-content">
+                                            <div class="item-media">
+                                                <img src="../../img/1.png" ></div>
+                                            <div class="item-inner">
+                                                <div class="item-title produt_name_style">name</div>
+                                                <div class="item-title">取餐时间</div>
+                                                <div class="item-title">类别</div>
+                                                <div class="item-title get_num">取餐码</div>
+                                                <div class="item-title-row">
+                                                    <div class="item-title price_style"><b>$15</b></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p><a href="#" class="button button-fill  ok_order">完成订单 </a></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 工具栏 -->
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="#index_page">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item" href="#product_Manager">
+            <span class="icon icon-app"></span>
+            <span class="tab-label">商品管理</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-me"></span>
+            <span class="tab-label">个人中心</span>
+        </a>
+    </nav>
+</div>
+</body>
+</html>

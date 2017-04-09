@@ -102,6 +102,32 @@ INSERT INTO `t_business_domain` VALUES (1,'金桥餐厅',NULL,'thum2b.jpg'),(2,'
 UNLOCK TABLES;
 
 --
+-- Table structure for table `t_business_item`
+--
+
+DROP TABLE IF EXISTS `t_business_item`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `t_business_item` (
+  `business_item_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cart_id` varchar(255) DEFAULT NULL,
+  `business_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`business_item_id`),
+  KEY `FKAE4343A7F1C420A5` (`cart_id`),
+  CONSTRAINT `FKAE4343A7F1C420A5` FOREIGN KEY (`cart_id`) REFERENCES `t_cart` (`cart_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `t_business_item`
+--
+
+LOCK TABLES `t_business_item` WRITE;
+/*!40000 ALTER TABLE `t_business_item` DISABLE KEYS */;
+/*!40000 ALTER TABLE `t_business_item` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `t_cart`
 --
 
@@ -187,18 +213,20 @@ CREATE TABLE `t_order` (
   `product_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   `order_number` varchar(255) DEFAULT NULL,
-  `code` varchar(255) DEFAULT NULL,
+  `meal_code` varchar(255) DEFAULT NULL,
+  `total_price` double DEFAULT NULL,
   `number` int(11) DEFAULT NULL,
   `order_time` datetime DEFAULT NULL,
   `deal_time` datetime DEFAULT NULL,
-  `finish_time` varchar(255) DEFAULT NULL,
+  `notice_time` datetime DEFAULT NULL,
+  `receive_time` datetime DEFAULT NULL,
+  `business_id` int(11) DEFAULT NULL,
   `state` int(11) DEFAULT '0',
-  `remark` varchar(255) DEFAULT NULL,
+  `user_remark` varchar(255) DEFAULT NULL,
+  `refuse_id` int(11) DEFAULT '0',
   `classifys` varchar(255) DEFAULT NULL,
-  `flavor` varchar(255) DEFAULT NULL,
-  `size` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,6 +235,7 @@ CREATE TABLE `t_order` (
 
 LOCK TABLES `t_order` WRITE;
 /*!40000 ALTER TABLE `t_order` DISABLE KEYS */;
+INSERT INTO `t_order` VALUES (1,159,2,'12121212','1221',NULL,5,NULL,NULL,NULL,'2017-04-09 17:28:09',2,0,'hhh',0,'微辣/小碗');
 /*!40000 ALTER TABLE `t_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -311,8 +340,11 @@ CREATE TABLE `t_product_item` (
   `price` double DEFAULT NULL,
   `flavor_and_product` varchar(255) DEFAULT NULL,
   `size_and_product` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`product_item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  `business_item_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`product_item_id`),
+  KEY `FK1792EA4E46971726` (`business_item_id`),
+  CONSTRAINT `FK1792EA4E46971726` FOREIGN KEY (`business_item_id`) REFERENCES `t_business_item` (`business_item_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -321,7 +353,7 @@ CREATE TABLE `t_product_item` (
 
 LOCK TABLES `t_product_item` WRITE;
 /*!40000 ALTER TABLE `t_product_item` DISABLE KEYS */;
-INSERT INTO `t_product_item` VALUES (1,1,151,'1',1,10,'特辣','big'),(2,1,151,'1',1,10,'不辣','big'),(3,1,151,'1',1,6,'不辣','small'),(4,1,151,'',1,6,'微辣','small'),(5,1,151,'',1,10,'特辣','big');
+INSERT INTO `t_product_item` VALUES (1,1,151,'1',1,10,'特辣','big',NULL),(2,1,151,'1',1,10,'不辣','big',NULL),(3,1,151,'1',1,6,'不辣','small',NULL),(4,1,151,'',1,6,'微辣','small',NULL),(5,1,151,'',1,10,'特辣','big',NULL),(46,1,151,'b6078046a4424c0992dfbe9229dc2850',1,8,'特辣','middle',NULL),(51,1,151,'b6078046a4424c0992dfbe9229dc2850',1,10,'特辣','big',NULL);
 /*!40000 ALTER TABLE `t_product_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -371,6 +403,30 @@ CREATE TABLE `t_product_sort` (
 LOCK TABLES `t_product_sort` WRITE;
 /*!40000 ALTER TABLE `t_product_sort` DISABLE KEYS */;
 /*!40000 ALTER TABLE `t_product_sort` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `t_refuse_reason`
+--
+
+DROP TABLE IF EXISTS `t_refuse_reason`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `t_refuse_reason` (
+  `refuse_id` int(11) NOT NULL AUTO_INCREMENT,
+  `business_id` int(11) DEFAULT NULL,
+  `reason` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`refuse_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `t_refuse_reason`
+--
+
+LOCK TABLES `t_refuse_reason` WRITE;
+/*!40000 ALTER TABLE `t_refuse_reason` DISABLE KEYS */;
+/*!40000 ALTER TABLE `t_refuse_reason` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -436,4 +492,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-05 20:48:10
+-- Dump completed on 2017-04-09 21:01:36

@@ -11,8 +11,8 @@ public class Constant {
     public static final String ADD_CART = "添加成功";//购物车添加成功
     public static final String DELETE_CART = "删除成功";//购物车删除成功
     public static final String OPERATION_SUCCESS ="操作成功";
-    public static final String EDIT_PRODUCT_SUCCESS = "编辑成功";
-    public static final String ADD_PRODUCT_SUCCESS = "添加成功";
+    public static final String EDIT_SUCCESS = "修改成功";
+    public static final String ADD_UCCESS = "添加成功";
 
 
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.obao.entity">
+	<class name="RefuseOrderReason" table="t_refuse_reason">
+		<id name="refuseId" type="integer">
+			<column name="refuse_id" />
+			<generator class="native" />
+		</id>
+		<property name="businessId" type="integer">
+			<column name="business_id"/>
+		</property>
+		<property name="reason" type="string" />
+ 	</class>
+</hibernate-mapping>

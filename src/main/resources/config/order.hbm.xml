@@ -41,7 +41,9 @@
 			<column name="user_remark" />
 		</property>
 
-		<property name="businessRemark" type="java.lang.String" column="business_remark"/>
+		<property name="refuseId" type="integer" >
+			<column name="refuse_id" default="0"/>
+		</property>
 		<property name="classifys" type="string" />
 	</class>
 </hibernate-mapping>

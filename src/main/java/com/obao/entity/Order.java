@@ -9,6 +9,7 @@ public class Order {
     private Integer orderId;
     private Integer userId;
     private Integer productId;//商品id
+    private Integer refuseId;//订单被拒绝时的原因id
     private Integer state;//状态 0 下单未处理 1下单已处理 2 取餐成功 3拒单
     private Integer number;//数量
     private Double totalPrice;
@@ -16,7 +17,6 @@ public class Order {
     private String mealCode;//取餐码
     private String classifys; // 商品类别
     private String customerRemark;//用户留言
-    private String businessRemark;//商家拒单备注
     private Date orderTime;//下单时间
     private Date dealTime;//处理时间
     private Date noticeTime;//通知时间
@@ -110,13 +110,6 @@ public class Order {
         this.customerRemark = customerRemark;
     }
 
-    public String getBusinessRemark() {
-        return businessRemark;
-    }
-
-    public void setBusinessRemark(String businessRemark) {
-        this.businessRemark = businessRemark;
-    }
 
     public Integer getUserId() {
         return userId;
@@ -140,6 +133,14 @@ public class Order {
 
     public void setTotalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public Integer getRefuseId() {
+        return refuseId;
+    }
+
+    public void setRefuseId(Integer refuseId) {
+        this.refuseId = refuseId;
     }
 }
 

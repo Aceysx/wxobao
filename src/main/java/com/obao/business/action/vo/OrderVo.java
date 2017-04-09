@@ -2,6 +2,7 @@ package com.obao.business.action.vo;
 
 import com.obao.entity.Business;
 import com.obao.entity.Order;
+import com.obao.entity.RefuseOrderReason;
 
 /**
  * Created by Acey on 17-4-7.
@@ -10,7 +11,16 @@ import com.obao.entity.Order;
 public class OrderVo {
     private Order order;
     private Business business;
+    private RefuseOrderReason reason;
     private String codeValue;
+
+    public RefuseOrderReason getReason() {
+        return reason;
+    }
+
+    public void setReason(RefuseOrderReason reason) {
+        this.reason = reason;
+    }
 
     public String getCodeValue() {
         return codeValue;

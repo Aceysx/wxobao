@@ -49,6 +49,7 @@
 	<bean id="bbusinessAction" class="com.obao.business.action.business.BusinessAction" scope="prototype">
 	</bean>
 	<bean id="bproductAction" class="com.obao.business.action.product.ProductAction">
+		<property name="productService" ref="productService"/>
 	</bean>
 </beans>
 

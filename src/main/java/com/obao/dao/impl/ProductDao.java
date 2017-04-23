@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.transform.Transformers;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/11/8.
@@ -140,6 +141,12 @@ public class ProductDao implements IProductDao {
     @Override
     public List<String> findImgsByProductId(Integer id) {
         String sql = "select img from t_product_imgs where product_id ="+id;
+        return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+    }
+
+    @Override
+    public List<Map<String, Object>> findProductsByBusinessId(Integer businessId) {
+        String sql = "SELECT product_id, product_name,product_img,new_price,sales FROM t_product where business_id ="+businessId+" order BY add_time DESC ";
         return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
     }
 }

@@ -1,9 +1,11 @@
 package com.obao.service;
 
 
+import com.obao.business.action.vo.ProductVo;
 import com.obao.entity.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/11/8.
@@ -116,4 +118,6 @@ public interface IProductService {
      * @return
      */
     List<String> findImgsByProductId(Integer id);
+
+    List<Map<String,Object>> findBusinessProducts(ProductVo productVo);
 }

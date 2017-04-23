@@ -18,6 +18,7 @@ public class CartAction extends ActionSupport {
     private ProductItem item;//产品项
     private String userId;
     private InvokeResult resultData;
+
     /**
      * 查找我的购物车
      *

@@ -1,11 +1,15 @@
 package com.obao.service.impl;
 
 
+import com.obao.business.action.vo.ProductVo;
 import com.obao.dao.IProductDao;
 import com.obao.entity.*;
 import com.obao.service.IProductService;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/11/8.
@@ -106,6 +110,25 @@ public class ProductService implements IProductService {
     @Override
     public List<String> findImgsByProductId(Integer id) {
         return productDao.findImgsByProductId(id);
+    }
+
+    @Override
+    public List<Map<String,Object>> findBusinessProducts(ProductVo productVo) {
+        Map<String, Object> data = new HashMap<>();
+        List<Map<String,Object>> products = productDao.findProductsByBusinessId(productVo.getBusiness().getBusinessId());
+        List<List<Object>> flavors = null;
+        List<List<Object>> sizes = null;
+        for (Map<String, Object> product : products) {
+            flavors = new ArrayList<>();
+            sizes = new ArrayList<>();
+            List<Object> flavor = productDao.findFlavor((Integer) product.get("product_id"));
+            flavors.add(flavor);
+            List<Object> size = productDao.findSize((Integer) product.get("product_id"));
+            sizes.add(size);
+            product.put("flavors",flavors);
+            product.put("sizes",sizes);
+        }
+        return products;
     }
 
 }

@@ -4,6 +4,7 @@ package com.obao.dao;
 import com.obao.entity.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/11/8.
@@ -124,4 +125,6 @@ public interface IProductDao {
      * @return
      */
     List<String> findImgsByProductId(Integer id);
+
+    List<Map<String,Object>> findProductsByBusinessId(Integer businessId);
 }

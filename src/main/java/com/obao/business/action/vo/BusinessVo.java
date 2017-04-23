@@ -7,7 +7,7 @@ import com.obao.entity.Business;
  * description:
  */
 public class BusinessVo {
-    private Business business;
+    private Business business ;
 
 
     public Business getBusiness() {

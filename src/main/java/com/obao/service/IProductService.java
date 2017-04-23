@@ -128,4 +128,8 @@ public interface IProductService {
     void deleteProductById(ProductVo productVo);
 
     Map<String,Object> findClassifys();
+
+    List<Map<String,Object>> findProductsByState(ProductVo productVo);
+
+    void yesOrNoShowProduct(ProductVo productVo);
 }

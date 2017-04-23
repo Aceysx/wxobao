@@ -193,4 +193,14 @@ public class ProductService implements IProductService {
         return data;
     }
 
+    @Override
+    public List<Map<String, Object>> findProductsByState(ProductVo productVo) {
+        return productDao.findProductsByState(productVo.getBusiness().getBusinessId(),productVo.getProduct().getState());
+    }
+
+    @Override
+    public void yesOrNoShowProduct(ProductVo productVo) {
+        productDao.changeProductState(productVo.getProduct().getState(),productVo.getProduct().getProductId());
+    }
+
 }

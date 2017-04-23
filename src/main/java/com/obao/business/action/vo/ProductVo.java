@@ -12,8 +12,8 @@ import java.util.Map;
  * description:
  */
 public class ProductVo {
-    private Business business;
-    private Product product;
+    private Business business = new Business();
+    private Product product = new Product();
     private List<Map<String, String>> flavors = new ArrayList<>();
     private List<Map<String, String>> sizes = new ArrayList<>();
     private String sortMethod;

@@ -139,4 +139,8 @@ public interface IProductDao {
     List<ProductFlavor> findFlavors();
 
     List<ProductSize> findSizes();
+
+    List<Map<String,Object>> findProductsByState(Integer businessId, Integer state);
+
+    void changeProductState(Integer state, Integer productId);
 }

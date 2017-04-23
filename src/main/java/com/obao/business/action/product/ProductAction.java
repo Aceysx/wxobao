@@ -12,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * Created by Administrator on 2016/11/8.
  */
 public class ProductAction extends ActionSupport {
-    private ProductVo productVo;
+    private ProductVo productVo = null;
     private IProductService productService;
     private InvokeResult resultData;
 
@@ -32,12 +32,13 @@ public class ProductAction extends ActionSupport {
 
     /**
      * 显示商家下所有商品（按销量降序排列）
+     *
      * @return
      */
     public String findBusinessProductsSortBySales() {
-        try{
+        try {
             resultData = resultData.success(productService.findBusinessProductsSortBySales(productVo));
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             resultData.failure(Constant.EXCEPTION_TIP);
         }
@@ -45,10 +46,9 @@ public class ProductAction extends ActionSupport {
     }
 
     /**
-     *根据商品id查询商品详情
+     * 根据商品id查询商品详情
      */
-    public String findProductById()
-    {
+    public String findProductById() {
         try {
             resultData = resultData.success(productService.findProductById(productVo));
         } catch (Exception e) {
@@ -60,24 +60,23 @@ public class ProductAction extends ActionSupport {
     }
 
     /**
-     *  编辑商品
+     * 编辑商品
      */
-    public String editProduct()
-    {
+    public String editProduct() {
         try {
             resultData = resultData.success();
         } catch (Exception e) {
             e.printStackTrace();
             resultData.failure(Constant.EXCEPTION_TIP);
         }
+
         return "resultData";
     }
 
     /**
-     *删除商品
+     * 删除商品
      */
-    public String deleteProduct()
-    {
+    public String deleteProduct() {
         try {
             productService.deleteProductById(productVo);
             resultData = resultData.success(Constant.DELETE_CART);
@@ -85,33 +84,50 @@ public class ProductAction extends ActionSupport {
             e.printStackTrace();
             resultData.failure(Constant.EXCEPTION_TIP);
         }
+
         return "resultData";
     }
 
     /**
      * 查询分类（口味和尺寸）
      */
-    public String findClassifys()
-    {
+    public String findClassifys() {
         try {
             resultData = resultData.success(productService.findClassifys());
         } catch (Exception e) {
             e.printStackTrace();
             resultData.failure(Constant.EXCEPTION_TIP);
         }
+
         return "resultData";
     }
+
     /**
      * 查询所有上架/下架商品
      */
-    public String findProductsByState()
-    {
+    public String findProductsByState() {
         try {
-            resultData = resultData.success();
+            resultData = resultData.success(productService.findProductsByState(productVo));
         } catch (Exception e) {
             e.printStackTrace();
             resultData.failure(Constant.EXCEPTION_TIP);
         }
+
+        return "resultData";
+    }
+
+    /**
+     * 下架/上架商品
+     */
+    public String yesOrNoShowProduct() {
+        try {
+            productService.yesOrNoShowProduct(productVo);
+            resultData = resultData.success(Constant.EDIT_SUCCESS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            resultData.failure(Constant.EXCEPTION_TIP);
+        }
+
         return "resultData";
     }
 

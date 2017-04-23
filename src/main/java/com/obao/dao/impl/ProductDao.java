@@ -185,4 +185,16 @@ public class ProductDao implements IProductDao {
         return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
     }
 
+    @Override
+    public List<Map<String, Object>> findProductsByState(Integer businessId, Integer state) {
+        String sql = "SELECT product_id,product_img,product_name FROM t_product WHERE state="+state+" AND business_id="+businessId;
+        return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+    }
+
+    @Override
+    public void changeProductState(Integer state, Integer productId) {
+        String sql = "UPDATE  t_product SET state ="+state+" WHERE product_id="+productId;
+        sessionFactory.getCurrentSession().createSQLQuery(sql).executeUpdate();
+    }
+
 }

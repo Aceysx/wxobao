@@ -127,4 +127,16 @@ public interface IProductDao {
     List<String> findImgsByProductId(Integer id);
 
     List<Map<String,Object>> findProductsByBusinessId(Integer businessId);
+
+    List<Map<String,Object>> findBusinessProductsSortBySales(Integer businessId);
+
+    Map<String,Object> findProductByProductId(Integer productId);
+
+    <T> void deleteEntity(T obj);
+
+    void deleteProductById(Integer id);
+
+    List<ProductFlavor> findFlavors();
+
+    List<ProductSize> findSizes();
 }

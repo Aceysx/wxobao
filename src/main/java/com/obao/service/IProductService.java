@@ -120,4 +120,12 @@ public interface IProductService {
     List<String> findImgsByProductId(Integer id);
 
     List<Map<String,Object>> findBusinessProducts(ProductVo productVo);
+
+    List<Map<String,Object>> findBusinessProductsSortBySales(ProductVo productVo);
+
+    Map<String,Object> findProductById(ProductVo productVo);
+
+    void deleteProductById(ProductVo productVo);
+
+    Map<String,Object> findClassifys();
 }

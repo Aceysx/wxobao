@@ -149,4 +149,40 @@ public class ProductDao implements IProductDao {
         String sql = "SELECT product_id, product_name,product_img,new_price,sales FROM t_product where business_id ="+businessId+" order BY add_time DESC ";
         return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
     }
+
+    @Override
+    public List<Map<String, Object>> findBusinessProductsSortBySales(Integer businessId) {
+        String sql = "SELECT product_id, product_name,product_img,new_price,sales FROM t_product where business_id ="+businessId+" order BY sales DESC ";
+        return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+    }
+
+    @Override
+    public Map<String, Object> findProductByProductId(Integer productId) {
+        String sql = "SELECT product_id, product_name FROM t_product where product_id = "+productId;
+        return (Map<String, Object>) sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list().get(0);
+    }
+
+    @Override
+    public <T> void deleteEntity(T obj) {
+        sessionFactory.getCurrentSession().delete(obj);
+    }
+
+    @Override
+    public void deleteProductById(Integer id) {
+        String sql = "delete from t_product where product_id =" +id;
+        sessionFactory.getCurrentSession().createSQLQuery(sql).executeUpdate();
+    }
+
+    @Override
+    public List<ProductFlavor> findFlavors() {
+        String sql = "SELECT flavor_id,name FROM t_product_flavor";
+        return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+    }
+
+    @Override
+    public List<ProductSize> findSizes() {
+        String sql = "SELECT size_id,size FROM t_product_size";
+        return sessionFactory.getCurrentSession().createSQLQuery(sql).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+    }
+
 }

@@ -286,10 +286,22 @@ function person_info() {
     $("#personInfo_name").text(info.userName);
     $("#personInfo_img").attr({src:info.userImg});
     $("#personInfo_sex").text(info.sex);
-    // $("#personInfo_address").text(info.address);
 }
 
+function evaluateProduct() {
+    // orderId,productId,img
+}
 
+function changeStar(number) {
+    const [star, unStar] = ["★", "☆"];
+    for(let index = 1; index < 6; ++index) {
+        if(index > number) {
+            $("#star_" + index).text(unStar);
+        }else{
+            $("#star_" + index).text(star);
+        }
+    }
+}
 //全局js
 //notifytion
 function show_notification(title,text,img_url) {

@@ -30,7 +30,7 @@ $(document).on("pageInit",function (e,pageId,$page) {
     //获取 url 中的参数
     ids = getIds(location.href);
     //每个页面都判断用户是否非法登录（非微信客户端进入页面）
-    // uid = getUserId();
+    uid = getUserId();
 
 /**
  * 主页
@@ -91,7 +91,9 @@ $(document).on("pageInit",function (e,pageId,$page) {
     //orders page
     if(pageId == "page_orders"){
     }
-
+    if(pageId == "page_evaluate") {
+        evaluateProduct();
+    }
 })
 
 //let location href split by "?" 将 url 按 '?' 分割

@@ -11,7 +11,7 @@
             <div class="buttons-tab">
                 <a href="#tab1" class="tab-link active button">未处理</a>
                 <a href="#tab2" class="tab-link button">处理中</a>
-                <a href="#tab3" class="tab-link button">已完成</a>
+                <a href="#tab3" class="tab-link button">待评价</a>
             </div>
             <div class="content-block">
                 <div class="tabs">
@@ -33,6 +33,7 @@
                                                         <div class="item-title price_style"><b>$15</b></div>
                                                         <div class="item-after"><font color="red"><b>未处理</b></font></div>
                                                     </div>
+
                                                 </div>
                                             </a>
                                         </li>
@@ -85,8 +86,13 @@
                                                         <div class="item-title price_style"><b>$15</b></div>
                                                         <div class="item-after"><font color="green"><b>已完成</b></font></div>
                                                     </div>
+
                                                 </div>
                                             </a>
+                                            <div class="item-title-row" style="border-top: 1px solid #e7e7e7;padding: .2rem 1rem;">
+                                                <div onclick="deleteOrder(1)"  style="padding: .2rem .5rem;margin-left: 6rem;border-radius: 1rem;border:1px solid #e7e7e7" > 删除订单</div>
+                                                <a href="evaluate.html?orderId=?productId=?productImg="  style="padding: .2rem 1.1rem;color: orangered;border-radius: 1rem;border:1px solid orangered">评价</a>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>

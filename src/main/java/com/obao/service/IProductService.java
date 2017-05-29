@@ -132,4 +132,6 @@ public interface IProductService {
     List<Map<String,Object>> findProductsByState(ProductVo productVo);
 
     void yesOrNoShowProduct(ProductVo productVo);
+
+    List<Map<String,Object>> findEvaluationsByProductId(Integer id);
 }

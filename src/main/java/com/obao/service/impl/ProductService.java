@@ -199,6 +199,11 @@ public class ProductService implements IProductService {
     }
 
     @Override
+    public List<Map<String, Object>> findEvaluationsByProductId(Integer id) {
+        return productDao.findEvaluationsByProductId(id);
+    }
+
+    @Override
     public void yesOrNoShowProduct(ProductVo productVo) {
         productDao.changeProductState(productVo.getProduct().getState(),productVo.getProduct().getProductId());
     }

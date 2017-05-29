@@ -143,4 +143,6 @@ public interface IProductDao {
     List<Map<String,Object>> findProductsByState(Integer businessId, Integer state);
 
     void changeProductState(Integer state, Integer productId);
+
+    List<Map<String,Object>> findEvaluationsByProductId(Integer id);
 }

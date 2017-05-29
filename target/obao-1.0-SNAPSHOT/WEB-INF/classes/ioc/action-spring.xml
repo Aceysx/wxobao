@@ -11,14 +11,15 @@
          http://www.springframework.org/schema/aop/spring-aop.xsd
          http://www.springframework.org/schema/tx
      	 http://www.springframework.org/schema/tx/spring-tx.xsd">
-	<!-- product -->
+
+
+	<!-- client -->
 	<bean id="cartAction" class="com.obao.client.action.cart.CartAction"
 		scope="prototype">
 		<property name="cartService" ref="cartService"></property>
 		<property name="userService" ref="userService"></property>
 		<property name="productService" ref="productService"></property>
 	</bean>
-	<!--order-->
 	<bean id="orderAction" class="com.obao.client.action.order.OrderAction" scope="prototype">
 		<property name="orderService" ref="orderService"></property>
 	</bean>
@@ -42,6 +43,15 @@
 	<bean id="weChatAction" class="com.obao.wechat.RenzhengAction" scope="prototype">
 		<property name="userService" ref="userService"/>
  	</bean>
+
+	<!--business-->
+	<bean id="borderAction" class="com.obao.business.action.order.OrderAction" scope="prototype">
+	</bean>
+	<bean id="bbusinessAction" class="com.obao.business.action.business.BusinessAction" scope="prototype">
+	</bean>
+	<bean id="bproductAction" class="com.obao.business.action.product.ProductAction">
+		<property name="productService" ref="productService"/>
+	</bean>
 </beans>
 
 

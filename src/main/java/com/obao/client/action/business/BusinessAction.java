@@ -15,24 +15,26 @@ public class BusinessAction extends ActionSupport {
 
     private Integer id;
     private InvokeResult resultData;
+
     /**
      * 查找区域下全部商家列表
      */
-    public String business(){
-        List<Object> businessList =  businessService.findBusinessList(id);
+    public String business() {
+        List<Object> businessList = businessService.findBusinessList(id);
         resultData = resultData.success(businessList);
         return "resultData";
     }
+
     /**
      * 查找商家下全部产品
+     *
      * @return
      */
-    public String findBusinessById(){
-        List<Object> business =  businessService.findBusinessById(id);
+    public String findBusinessById() {
+        List<Object> business = businessService.findBusinessById(id);
         resultData = resultData.success(business);
         return "resultData";
     }
-
 
 
     public void setBusinessService(IBusinessService businessService) {

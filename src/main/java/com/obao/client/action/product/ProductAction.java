@@ -108,6 +108,13 @@ public class ProductAction extends ActionSupport {
 	}
 
 
+	public String showEvaluations() {
+		List<Map<String, Object>> evaluations = productService.findEvaluationsByProductId(id);
+		resultData = resultData.success(evaluations);
+
+		return "resultData";
+	}
+
 	/**
      * get and set...
      */

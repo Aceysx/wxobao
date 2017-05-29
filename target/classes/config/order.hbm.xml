@@ -17,9 +17,10 @@
 		<property name="orderNumber" type="string">
 			<column name="order_number" />
 		</property>
-		<property name="code" type="string">
-			<column name="code" />
+		<property name="mealCode" type="string">
+			<column name="meal_code" />
 		</property>
+		<property name="totalPrice" type="double" column="total_price"/>
 		<property name="number" type="integer">
 			<column name="number" />
 		</property>
@@ -29,14 +30,19 @@
 		<property name="dealTime" type="timestamp">
 			<column name="deal_time" />
 		</property>
-		<property name="finishTime" type="string">
-			<column name="finish_time" />
+		<property name="noticeTime" type="timestamp" column="notice_time"/>
+		<property name="receiveTime" type="timestamp">
+			<column name="receive_time" />
 		</property>
 		<property name="state" type="integer">
 			<column name="state"  default="0"/>
 		</property>
-		<property name="remark" type="string">
-			<column name="remark" />
+		<property name="customerRemark" type="string">
+			<column name="user_remark" />
+		</property>
+
+		<property name="refuseId" type="integer" >
+			<column name="refuse_id" default="0"/>
 		</property>
 		<property name="classifys" type="string" />
 	</class>

@@ -6,7 +6,7 @@
     <class name="Collect" table="t_collect" >
         <id name="id" type="integer">
             <column name="collect_id" />
-            <generator class="increment" />
+            <generator class="native" />
         </id>
     <property name="addDate" type="date" >
         <column name="add_date"/>

@@ -11,6 +11,8 @@
          http://www.springframework.org/schema/aop/spring-aop.xsd
          http://www.springframework.org/schema/tx
      	 http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
 	<!-- cart -->
 	<bean id="cartDao" class="com.obao.dao.impl.CartDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>

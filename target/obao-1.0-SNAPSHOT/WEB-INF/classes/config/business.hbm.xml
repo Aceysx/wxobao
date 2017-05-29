@@ -39,10 +39,6 @@
             <column name="domain_id" />
         </property>
 
-        <!-- 一个商家对应多个产品 -->
-        <set name="products" lazy="false" cascade="save-update" >
-            <key column="business_id"></key>
-            <one-to-many class="Product"/>
-        </set>
+
     </class>
 </hibernate-mapping>

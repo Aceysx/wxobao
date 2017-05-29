@@ -197,4 +197,14 @@ public class ProductDao implements IProductDao {
         sessionFactory.getCurrentSession().createSQLQuery(sql).executeUpdate();
     }
 
+    @Override
+    public List<Map<String, Object>> findEvaluationsByProductId(Integer id) {
+        StringBuffer sql = new StringBuffer();
+        sql.append(" SELECT user.nickname,user.headimgurl,evaluation.content,evaluation.star,evaluation.time,o.classifys FROM t_evaluation evaluation ");
+        sql.append(" LEFT JOIN (SELECT order_id,classifys FROM t_order) o  on o.order_id= evaluation.order_id ");
+        sql.append(" LEFT JOIN (SELECT headimgurl,user_id,nickname FROM t_user) user on user.user_id = evaluation.user_id ");
+        sql.append(" WHERE evaluation.product_id = ").append(id).append(" ORDER BY time DESC ");
+
+        return sessionFactory.getCurrentSession().createSQLQuery(sql.toString()).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+    }
 }

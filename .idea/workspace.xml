@@ -2,113 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ff718d4-937e-4c0e-a5ba-5662f131ed91" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/banner.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/business-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/business.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/businessDomain-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/businessDomain.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/businessItem.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/cart-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/cart.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/collect-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/collect.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/flavorAndProduct.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/order-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/order.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/product-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/product.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/productFalvor.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/productItem.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/productSize.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/productSort.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/sizeAndProduct.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/user-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/obao/config/user.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wxobao.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/obao/client/action/product/ProductAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/obao/dao/IProductDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/obao/dao/impl/ProductDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/obao/entity/BusinessItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/obao/service/IProductService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/obao/service/impl/ProductService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/business-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/businessDomain-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/businessItem.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/cart-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/collect-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/order-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/product-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/user-struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/wxobao.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/client/action/business/BusinessAction.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/client/action/business/BusinessAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/client/action/cart/CartAction.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/client/action/cart/CartAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/client/action/order/OrderAction.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/client/action/order/OrderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/dao/ICartDao.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/dao/ICartDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/dao/impl/BusinessDao.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/dao/impl/BusinessDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/dao/impl/CartDao.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/dao/impl/CartDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/entity/Business.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/entity/Business.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/entity/Order.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/entity/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/entity/Product.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/entity/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/entity/ProductSort.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/entity/ProductSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/service/impl/CartService.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/service/impl/CartService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/service/impl/OrderService.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/service/impl/OrderService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/util/Constant.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/util/Constant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/util/InvokeResult.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/util/InvokeResult.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/obao/wechat/RenzhengAction.class" afterPath="$PROJECT_DIR$/target/classes/com/obao/wechat/RenzhengAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/client/action/business/BusinessAction.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/client/action/business/BusinessAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/client/action/cart/CartAction.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/client/action/cart/CartAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/client/action/order/OrderAction.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/client/action/order/OrderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/client/action/product/ProductAction.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/client/action/product/ProductAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/ICartDao.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/ICartDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/IProductDao.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/IProductDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/impl/BusinessDao.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/impl/BusinessDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/impl/CartDao.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/impl/CartDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/impl/ProductDao.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/dao/impl/ProductDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/entity/Business.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/entity/Business.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/entity/Order.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/entity/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/entity/Product.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/entity/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/entity/ProductSort.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/entity/ProductSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/service/IProductService.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/service/IProductService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/service/impl/CartService.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/service/impl/CartService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/service/impl/OrderService.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/service/impl/OrderService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/service/impl/ProductService.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/service/impl/ProductService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/util/Constant.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/util/Constant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/util/InvokeResult.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/util/InvokeResult.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/wechat/RenzhengAction.class" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/com/obao/wechat/RenzhengAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/wxobao.iml" afterPath="$PROJECT_DIR$/.idea/wxobao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/obao/client/action/business/BusinessAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/obao/client/action/business/BusinessAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/obao/client/action/product/ProductAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/obao/client/action/product/ProductAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/obao/dao/IProductDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/obao/dao/IProductDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/obao/dao/impl/ProductDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/obao/dao/impl/ProductDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/obao/service/IProductService.java" afterPath="$PROJECT_DIR$/src/main/java/com/obao/service/IProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/obao/service/impl/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/com/obao/service/impl/ProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/ioc/action-spring.xml" afterPath="$PROJECT_DIR$/src/main/resources/ioc/action-spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/ioc/dao-spring.xml" afterPath="$PROJECT_DIR$/src/main/resources/ioc/dao-spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/client/css/page_css.css" afterPath="$PROJECT_DIR$/src/main/webapp/client/css/page_css.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/client/js/all_ajax.js" afterPath="$PROJECT_DIR$/src/main/webapp/client/js/all_ajax.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/client/page/product_info.html" afterPath="$PROJECT_DIR$/src/main/webapp/client/page/product_info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/turn_to_wechat.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/turn_to_wechat.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/business.hbm.xml" afterPath="$PROJECT_DIR$/target/classes/config/business.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/collect.hbm.xml" afterPath="$PROJECT_DIR$/target/classes/config/collect.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/order.hbm.xml" afterPath="$PROJECT_DIR$/target/classes/config/order.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/product.hbm.xml" afterPath="$PROJECT_DIR$/target/classes/config/product.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/productSort.hbm.xml" afterPath="$PROJECT_DIR$/target/classes/config/productSort.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ioc/action-spring.xml" afterPath="$PROJECT_DIR$/target/classes/ioc/action-spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ioc/dao-spring.xml" afterPath="$PROJECT_DIR$/target/classes/ioc/dao-spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/struts.xml" afterPath="$PROJECT_DIR$/target/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/business.hbm.xml" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/business.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/collect.hbm.xml" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/collect.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/order.hbm.xml" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/order.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/product.hbm.xml" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/product.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/productSort.hbm.xml" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/config/productSort.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/ioc/action-spring.xml" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/ioc/action-spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/ioc/dao-spring.xml" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/ioc/dao-spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/turn_to_wechat.jsp" afterPath="$PROJECT_DIR$/target/obao-1.0-SNAPSHOT/turn_to_wechat.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -157,16 +54,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="wxobao.t_evaluation" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/af36ce8/2c9b65f1-3117-499c-9077-d5855ae857a6/wxobao.t_evaluation">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -182,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductAction.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/obao/client/action/product/ProductAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -192,12 +79,131 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IProductService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/obao/service/IProductService.java">
+      <file leaf-file-name="page_js.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/client/js/page_js.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="133" column="26" lean-forward="false" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="-3825">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1495515211448" expanded="true" signature="14:264" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="56:261" ph="{&quot;pagination&quot;: '.swiper-pagination'...}" />
+                <marker date="1495515211448" expanded="true" signature="268:283" ph="/** 商品详情 ...*/" />
+                <marker date="1495515211448" expanded="true" signature="329:581" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="366:472" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="476:579" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="624:756" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="790:889" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="923:1032" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="944:968" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="1056:1121" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="1151:1391" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="1177:1260" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="1264:1347" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="1420:1535" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="1550:1665" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="1683:2559" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="1830:2365" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="1856:2321" ph="{&quot;item.userId&quot;: uid...}" />
+                <marker date="1495515211448" expanded="true" signature="2414:2557" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="2561:2575" ph="/** 购物车 ...*/" />
+                <marker date="1495515211448" expanded="true" signature="2619:3008" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="2673:2802" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="2806:2937" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="3052:3653" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="3343:3483" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="3345:3410" ph="//..." />
+                <marker date="1495515211448" expanded="true" signature="3487:3582" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="3693:4089" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="3742:3895" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="3899:4054" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="4124:4425" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="4307:4362" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="4366:4422" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="4459:4794" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="4558:4757" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="4625:4751" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="4829:6026" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="5032:5091" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="5312:5367" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="5371:5427" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="5749:5890" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="5751:5816" ph="//..." />
+                <marker date="1495515211448" expanded="true" signature="5894:5990" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="6060:6864" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="6195:6237" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="6241:6860" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="6281:6842" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="6347:6597" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="6704:6830" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="6866:6883" ph="/** 下单页面填充 ...*/" />
+                <marker date="1495515211448" expanded="true" signature="6928:9160" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="8678:8748" ph="..." />
+                <marker date="1495515211448" expanded="true" signature="8992:9008" ph="..." />
+                <marker date="1495515211448" expanded="true" signature="9209:9212" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="9252:9577" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="9375:9514" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="9579:9594" ph="/** 个人中心 ...*/" />
+                <marker date="1495515211448" expanded="true" signature="9622:9787" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="9820:10044" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="10047:10066" ph="//..." />
+                <marker date="1495515211448" expanded="true" signature="10114:10409" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="10135:10405" ph="{&quot;title&quot;: title...}" />
+                <marker date="1495515211448" expanded="true" signature="10269:10317" ph="{...}" />
+                <marker date="1495515211448" expanded="true" signature="10351:10399" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all_ajax.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/client/js/all_ajax.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="330" column="102" lean-forward="false" selection-start-line="330" selection-start-column="102" selection-end-line="330" selection-end-column="102" />
+              <folding>
+                <marker date="1496043925016" expanded="true" signature="1475:1494" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="2329:2347" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="4783:4801" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="6190:6208" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="7615:7633" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="10146:10164" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="12718:12750" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="13419:13451" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="14452:15499" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="14518:14542" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="14543:14967" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="14636:14664" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="14716:14746" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="14841:14871" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="14841:14888" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="15026:15154" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="15212:15295" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="15212:15464" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="16582:16600" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="19502:19523" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="19942:20006" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="20143:20153" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="20690:20711" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="21147:21211" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="21352:21362" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="22124:22142" ph="..." />
+                <marker date="1496043925016" expanded="true" signature="22219:22262" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product_info.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/client/page/product_info.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="50" column="89" lean-forward="false" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="89" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#footer#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -226,7 +232,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/obao/dao/impl/ProductDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="151">
-              <caret line="204" column="57" lean-forward="true" selection-start-line="204" selection-start-column="57" selection-end-line="204" selection-end-column="57" />
+              <caret line="204" column="57" lean-forward="false" selection-start-line="204" selection-start-column="57" selection-end-line="204" selection-end-column="57" />
               <folding>
                 <marker date="1496042890665" expanded="true" signature="2060:2153" ph="SELECT produ... t_product" />
                 <marker date="1496042890665" expanded="true" signature="2388:2491" ph="SELECT produ... t_product" />
@@ -268,16 +274,6 @@
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/obao/business/action/product/ProductAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="123" column="27" lean-forward="false" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -327,7 +323,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/turn_to_wechat.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/client/js/wechat.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/client/css/page_css.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/client/page/product_info.html" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2c9b65f1-3117-499c-9077-d5855ae857a6/console_4.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2c9b65f1-3117-499c-9077-d5855ae857a6/console_3.sql" />
@@ -338,6 +333,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/obao/client/action/product/ProductAction.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2c9b65f1-3117-499c-9077-d5855ae857a6/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/obao/dao/impl/ProductDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/client/page/product_info.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/client/js/all_ajax.js" />
       </list>
     </option>
   </component>
@@ -412,6 +409,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -431,7 +432,89 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wxobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wxobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wxobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wxobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wxobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wxobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1078,12 +1161,12 @@
       <workItem from="1495689476391" duration="5777000" />
       <workItem from="1495958271738" duration="1120000" />
       <workItem from="1496031332419" duration="24000" />
-      <workItem from="1496031447613" duration="10186000" />
+      <workItem from="1496031447613" duration="11215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24433000" />
+    <option name="totallyTimeSpent" value="25462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
@@ -1114,7 +1197,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3871212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1386,17 +1469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/client/js/page_js.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1495515211448" expanded="true" signature="8678:8748" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="8992:9008" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/client/page/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1434,59 +1506,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/client/js/all_ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="264" column="26" lean-forward="false" selection-start-line="264" selection-start-column="20" selection-end-line="264" selection-end-column="26" />
-          <folding>
-            <marker date="1495515211448" expanded="true" signature="1431:1450" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="2267:2285" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="4657:4675" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="6033:6051" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="7426:7444" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="9898:9916" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="12356:12388" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="13031:13063" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="14611:14629" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="17470:17491" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="17910:17974" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="18107:18117" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="18642:18663" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="19099:19163" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="19300:19310" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="20056:20074" ph="..." />
-            <marker date="1495515211448" expanded="true" signature="20151:20194" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/client/css/page_css.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="69" column="4" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/client/page/product_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="46" column="41" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="41" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#footer#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1591,19 +1615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/af36ce8/2c9b65f1-3117-499c-9077-d5855ae857a6/wxobao.t_evaluation">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2c9b65f1-3117-499c-9077-d5855ae857a6/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1615,7 +1626,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/obao/dao/impl/ProductDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
-          <caret line="204" column="57" lean-forward="true" selection-start-line="204" selection-start-column="57" selection-end-line="204" selection-end-column="57" />
+          <caret line="204" column="57" lean-forward="false" selection-start-line="204" selection-start-column="57" selection-end-line="204" selection-end-column="57" />
           <folding>
             <marker date="1496042890665" expanded="true" signature="2060:2153" ph="SELECT produ... t_product" />
             <marker date="1496042890665" expanded="true" signature="2388:2491" ph="SELECT produ... t_product" />
@@ -1636,11 +1647,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/client/js/page_js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3825">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495515211448" expanded="true" signature="14:264" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="56:261" ph="{&quot;pagination&quot;: '.swiper-pagination'...}" />
+            <marker date="1495515211448" expanded="true" signature="268:283" ph="/** 商品详情 ...*/" />
+            <marker date="1495515211448" expanded="true" signature="329:581" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="366:472" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="476:579" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="624:756" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="790:889" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="923:1032" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="944:968" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="1056:1121" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="1151:1391" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="1177:1260" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="1264:1347" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="1420:1535" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="1550:1665" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="1683:2559" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="1830:2365" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="1856:2321" ph="{&quot;item.userId&quot;: uid...}" />
+            <marker date="1495515211448" expanded="true" signature="2414:2557" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="2561:2575" ph="/** 购物车 ...*/" />
+            <marker date="1495515211448" expanded="true" signature="2619:3008" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="2673:2802" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="2806:2937" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="3052:3653" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="3343:3483" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="3345:3410" ph="//..." />
+            <marker date="1495515211448" expanded="true" signature="3487:3582" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="3693:4089" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="3742:3895" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="3899:4054" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="4124:4425" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="4307:4362" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="4366:4422" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="4459:4794" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="4558:4757" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="4625:4751" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="4829:6026" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="5032:5091" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="5312:5367" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="5371:5427" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="5749:5890" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="5751:5816" ph="//..." />
+            <marker date="1495515211448" expanded="true" signature="5894:5990" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="6060:6864" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="6195:6237" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="6241:6860" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="6281:6842" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="6347:6597" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="6704:6830" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="6866:6883" ph="/** 下单页面填充 ...*/" />
+            <marker date="1495515211448" expanded="true" signature="6928:9160" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="8678:8748" ph="..." />
+            <marker date="1495515211448" expanded="true" signature="8992:9008" ph="..." />
+            <marker date="1495515211448" expanded="true" signature="9209:9212" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="9252:9577" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="9375:9514" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="9579:9594" ph="/** 个人中心 ...*/" />
+            <marker date="1495515211448" expanded="true" signature="9622:9787" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="9820:10044" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="10047:10066" ph="//..." />
+            <marker date="1495515211448" expanded="true" signature="10114:10409" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="10135:10405" ph="{&quot;title&quot;: title...}" />
+            <marker date="1495515211448" expanded="true" signature="10269:10317" ph="{...}" />
+            <marker date="1495515211448" expanded="true" signature="10351:10399" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/obao/client/action/product/ProductAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="110" column="33" lean-forward="false" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/client/page/product_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="50" column="89" lean-forward="false" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="89" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/af36ce8/2c9b65f1-3117-499c-9077-d5855ae857a6/wxobao.t_evaluation">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/client/js/all_ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="330" column="102" lean-forward="false" selection-start-line="330" selection-start-column="102" selection-end-line="330" selection-end-column="102" />
+          <folding>
+            <marker date="1496043925016" expanded="true" signature="1475:1494" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="2329:2347" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="4783:4801" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="6190:6208" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="7615:7633" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="10146:10164" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="12718:12750" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="13419:13451" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="14452:15499" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="14518:14542" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="14543:14967" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="14636:14664" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="14716:14746" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="14841:14871" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="14841:14888" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="15026:15154" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="15212:15295" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="15212:15464" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="16582:16600" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="19502:19523" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="19942:20006" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="20143:20153" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="20690:20711" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="21147:21211" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="21352:21362" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="22124:22142" ph="..." />
+            <marker date="1496043925016" expanded="true" signature="22219:22262" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

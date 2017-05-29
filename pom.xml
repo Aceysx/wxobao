@@ -17,9 +17,6 @@
       </plugin>
     </plugins>
   </build>
-  <packaging>war</packaging>
-  <name>obao</name>
-
   <dependencies>
 
     <dependency>

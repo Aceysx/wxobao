@@ -10,7 +10,7 @@ public class Order {
     private Integer userId;
     private Integer productId;//商品id
     private Integer refuseId;//订单被拒绝时的原因id
-    private Integer state;//状态 0 下单未处理 1下单已处理 2 取餐成功 3拒单
+    private Integer state;//状态 0 下单未处理 1下单已处理 2 取餐成功 3拒单 4 删除或已评价
     private Integer number;//数量
     private Double totalPrice;
     private String orderNumber;//订单号
